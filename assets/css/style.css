@@ -1,0 +1,4881 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:  Fortified
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+2. Header  / .main_header
+3. Banner  / .banner-section  
+4. About  / .aboutus_section  
+5. Service  / .services_section 
+6. Choose Us  / .chooseus_section  
+7. Case Studies  / .case_studies_section  
+8. Video  / .video_section  
+9. Testimonial  / .testimonials-section  
+10. Article  / .news_articles_section  
+11. Footer  / .footer_section  
+*/
+/*------------------------------------------------------------------
+# [Color Codes]
+
+#    --e-global-color-primary: #1f1f1f;
+#    --e-global-color-secondary: #4b2999;
+#    --e-global-color-text: #7c7c7c;
+#    --e-global-color-accent: #57eef1;
+#	 --e-global-color-white: #ffffff;
+#    --e-global-color-black: #000000;
+#    --e-global-color-dark-gray: #282f3d;
+#    --e-global-color-grayish-blue: #a2abbd;
+#    --e-global-color-grayish-red: #c4c0c1;
+#    --e-global-color-very-pale-blue: #fafaff;
+#    --e-global-color-bright-yellow: #fbc729;
+#    --e-global-color-light-grayish-blue: #d0cee2;
+#    --e-global-color-dark-blue: #0e1625;
+#    --e-global-color-light-gray: #dedede;
+#    --e-global-color-light-gray-blue: #e8e7fb;
+#    --e-global-color-pale-blue: #f1f0ff;
+#    --e-global-color-very-dark-blue: #0d1422;
+#    --e-global-color-mostly-black: #111929;
+#    --e-global-color-mostly-black-blue: #161f30;
+#    --e-global-color-very-dark-grayish-blue: #29303f;
+#    --e-global-color-very-dark-mostly-black-blue: #111929;
+#    --e-global-color-very-dark-black-blue: #0a111e;
+#    --e-global-color-very-light-blue: #63686a;
+#    --e-global-color-very-light-gray: #e5e5e5;
+#    --e-global-color-pure-red: #ff0000;
+*/
+/*------------------------------------------------------------------
+# [Typography]
+ 
+Body copy: 'Lexend Deca', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root { 
+    --e-global-color-primary: #1f1f1f;
+    --e-global-color-secondary: #4b2999;
+    --e-global-color-text: #7c7c7c;
+    --e-global-color-accent: #57eef1;
+	--e-global-color-white: #ffffff;
+    --e-global-color-black: #000000;
+    --e-global-color-dark-gray: #282f3d;
+    --e-global-color-grayish-blue: #a2abbd;
+    --e-global-color-grayish-red: #c4c0c1;
+    --e-global-color-very-pale-blue: #fafaff;
+    --e-global-color-bright-yellow: #fbc729;
+    --e-global-color-light-grayish-blue: #d0cee2;
+    --e-global-color-dark-blue: #0e1625;
+    --e-global-color-light-gray: #dedede;
+    --e-global-color-light-gray-blue: #e8e7fb;
+    --e-global-color-pale-blue: #f1f0ff;
+    --e-global-color-very-dark-blue: #0d1422;
+    --e-global-color-mostly-black: #111929;
+    --e-global-color-mostly-black-blue: #161f30;
+    --e-global-color-very-dark-grayish-blue: #29303f;
+    --e-global-color-very-dark-mostly-black-blue: #111929;
+    --e-global-color-very-dark-black-blue: #0a111e;
+    --e-global-color-very-light-blue: #63686a;
+    --e-global-color-very-light-gray: #e5e5e5;
+    --e-global-color-pure-red: #ff0000;
+}
+
+h1{
+    font-size: 74px;
+    line-height: 77px;
+    font-weight: 600;
+}
+h2{
+    font-size: 44px;
+    line-height: 49px;
+    font-weight: 600;
+}
+h3{
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 600;
+}
+h4{
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 600;
+}
+h5{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+}
+h6{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+p{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.text-size-18 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+}
+.text-size-16 {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+}
+.text-size-14 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+}
+a {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+}
+.default-btn {
+    padding: 20px 42px;
+    display: inline-block;
+    color: var(--e-global-color-white);
+    background-image: linear-gradient(90deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.default-btn:hover {
+    color: var(--e-global-color-white);
+    background-image: linear-gradient(90deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+.hover-effect {
+    transition: all 0.3s ease-in-out;
+}
+.hover-effect:hover {
+    transform: translateY(-5px);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Cyber Agency Home Page Style */
+
+/* Cyber Agency Home Page Header Section Style */
+
+.banner-section-outer {
+   background: url('../images/banner_background.png');
+   position: relative;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.banner-section-outer .card-overlay {
+    background: rgba(0, 0, 0, 60%);
+}
+.banner-section-outer::before {
+    background: url(../images/bannerbackgroundbottom.png);
+    content: "";
+    width: 949px;
+    height: 71px;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
+}
+.banner-section-outer::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-bottom: solid 28px rgb(255,255,255);
+    border-right: solid 1135px rgb(255,255,255);
+    border-left: solid 750px transparent;
+    border-top: solid 42px transparent;
+} 
+.main_header {
+    padding: 40px 280px 40px 280px;
+    position: relative;
+    z-index: 2;
+}
+.navbar-collapse ul{
+    text-align: center;
+    align-items: center; 
+    display: inherit; 
+}
+.navbar-expand-lg{
+    position: relative;
+    z-index: 1;
+}
+.navbar-brand {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.navbar-nav li {
+    margin: 0 13px 0 17px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-nav li:first-child{
+    margin-left: 0;
+}
+.navbar-nav .nav-item a{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: var(--e-global-color-white) !important;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-nav .nav-item a:hover{
+    color: var(--e-global-color-accent) !important;
+    background-color: transparent;
+}
+.navbar-nav .active > a{
+    color: var(--e-global-color-accent) !important;
+}
+.navbar-collapse .drop-down-pages {
+    text-align: left;
+    margin-left: 0;
+}
+.navbar-nav .dropdown-menu {
+    background-color: var(--e-global-color-white);
+    position: absolute;
+    width: 200px;
+    left: 0;
+    top: 35px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: 1px 1px 30px rgb(0 0 0 / 1%);
+}
+.navbar-nav .drop-down-pages li{
+    margin: 0;
+    border-bottom: 1px solid var(--e-global-color-white);
+}
+.navbar-nav .drop-down-pages li:last-child{
+    border: none;
+}
+.navbar-nav .drop-down-pages .nav-item a {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    color: var(--e-global-color-primary) !important;
+}
+.navbar-nav .drop-down-pages li:hover::after {
+    display: none;
+}
+.navbar-nav .nav-item .dropdown-item:hover{
+    color: var(--e-global-color-white) !important;
+    background-image: linear-gradient(90deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%) !important;
+}
+.navbar-nav .drop-down-pages .active > a{
+    color: var(--e-global-color-white) !important;
+    background-image: linear-gradient(90deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%) !important;
+}
+.navbar-nav .drop-down-pages .active > a:hover {
+    color: var(--e-global-color-white) !important;
+    background-color: var(--e-global-color-accent) !important;
+}
+.navbar-expand-lg .drop-down-pages .nav-link {
+    padding-left: 0;
+}
+.outer_div {
+    margin-left: 35px;
+}
+.outer_div .icon {
+    padding: 0px 13px;
+    display: inline-block;
+    position: relative;
+}
+.outer_div .icon span {
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    background: var(--e-global-color-secondary);
+    display: inline-block;
+    border-radius: 500px;
+    line-height: 10px;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    color: var(--e-global-color-white);
+    font-size: 8px;
+}
+.outer_div .get_started {
+    padding: 17px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--e-global-color-white);
+    background-color: transparent;
+    display: inline-block;
+    margin-left: 30px;
+}
+.outer_div .get_started:hover {
+    background-color: var(--e-global-color-accent);
+    border: 1px solid var(--e-global-color-accent);
+}
+
+/* SEARCH FORM */ 
+
+#search {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-transition: all 0.5s ease-in-out;
+       -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+	       -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+    -webkit-transform: translate(0px, -100%) scale(0, 0);
+	     -moz-transform: translate(0px, -100%) scale(0, 0);
+	      -ms-transform: translate(0px, -100%) scale(0, 0);
+         -o-transform: translate(0px, -100%) scale(0, 0);
+	          transform: translate(0px, -100%) scale(0, 0);    
+    opacity: 0;
+    display: none;
+}
+#search.open {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+       -moz-transform: translate(0px, 0px) scale(1, 1);
+    	  -ms-transform: translate(0px, 0px) scale(1, 1);
+	       -o-transform: translate(0px, 0px) scale(1, 1);
+	           transform: translate(0px, 0px) scale(1, 1); 
+    opacity: 1;
+    z-index: 106;
+    display: block;
+}
+#search input[type="search"] {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -51px;
+    width: 60%;
+    margin-left: 20%;
+    color: rgb(255, 255, 255);
+  	background: transparent;
+  	border-top: none;
+  	border-bottom: 2px solid rgba(255, 255, 255, .5);
+  	border-left: 0px solid transparent;
+  	border-right: 0px solid transparent;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    outline: none;
+  	padding: 10px;
+}
+#search input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    content: "\f00d";
+    background-image: url('../images/close.png');
+}
+#search .close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+	opacity: 1;
+	font-size: 27px;
+  	color: #fff;
+}
+#search .close:hover{
+  color: var(--e-global-color-accent);
+  cursor: pointer;
+  text-shadow: none;
+}
+
+/*  Social Icons Section Style */
+
+.banner_content-section {
+    position: relative;
+}
+.left_icons {
+    top: 85px;
+    left: -230px;
+    position: absolute;
+    z-index: 1;
+}
+.left_icons ul li {
+    display: block;
+    padding-bottom: 5px;
+}
+.left_icons ul li i {
+    border-radius: 100%;
+    background: transparent;
+    color: var(--e-global-color-white);
+    font-size: 20px;
+    line-height: 51px;
+    height: 51px;
+    width: 51px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.left_icons i:hover {
+    background-image: linear-gradient(33deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+
+/* Cyber Agency Home Page Banner Section Style */
+
+.banner-section-outer .banner-section{
+    padding: 172px 280px 265px;
+}
+.banner-section-outer .banner-section .banner-content h6 {
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 70px;
+}
+.banner-section-outer .banner-section .banner-content h6::before {
+    content: "";
+    height: 1px;
+    width: 56px;
+    background-color: var(--e-global-color-grayish-red);
+    position: absolute;
+    bottom: 12px;
+    left: 2px;
+    transition: all 0.3s ease-in-out;
+}
+.banner-section-outer .banner-section .banner-content h1 {
+    margin-bottom: 16px;
+}
+.banner-section-outer .banner-section .banner-content p {
+    padding-right: 35px;
+    margin-bottom: 30px;
+}
+.banner-section-outer .banner-section .banner-content .btn_wrapper a {
+    margin-right: 18px;
+}
+.banner-section-outer .banner-section .banner-content .btn_wrapper .play-icon {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--e-global-color-white);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    padding-left: 68px;
+}
+.banner-section-outer .banner-section .banner-content .btn_wrapper .play-icon figure {
+    height: 57px;
+    width: 57px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-image: none;
+    border-image: none;
+    position: absolute;
+    top: -22px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+.banner-section-outer .banner-section .banner-content .btn_wrapper .play-icon:hover {
+    color: var(--e-global-color-accent);
+}
+.banner-section-outer .banner-section .banner-content .btn_wrapper .play-icon:hover figure {
+    background-image: linear-gradient(33deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-image: linear-gradient(33deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border: 1px solid var(--e-global-color-secondary);
+}
+.banner-section-outer .banner-section .banner_bottom_shape {
+    bottom: 0;
+    right: -3px;
+}
+
+/* Cyber Agency Home Page About Us Section Style */
+
+.aboutus_section {
+    padding: 136px 0 180px;
+}
+.aboutus_section .aboutus_images_wrapper{
+    position: relative;
+}
+.aboutus_section .aboutus_images_wrapper .aboutus_image_one {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.aboutus_section .aboutus_images_wrapper .aboutus_image_two {
+    position: relative;
+    top: 30px;
+    left: 0;
+}
+.aboutus_section .aboutus_images_wrapper .aboutus_image_three {
+    position: absolute;
+    top: 90px;
+    right: -48px;
+}
+.aboutus_section .aboutus_content_wrapper {
+    width: 150px;
+    height: 150px;
+    border: 4px solid var(--e-global-color-white);
+    border-radius: 100%;
+    background-image: linear-gradient(46deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    text-align: center;
+    padding: 25px;
+    position: absolute;
+    top: 28px;
+    bottom: 0;
+    left: 46px;
+    right: 0;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+.aboutus_section .aboutus_content_wrapper .aboutus_span_wrapper span {
+    font-size: 50px;
+    line-height: 52px;
+    color: var(--e-global-color-white);
+    font-weight: 600;
+    position: relative;
+    left: 6px;
+}
+.aboutus_section .aboutus_content_wrapper .aboutus_span_wrapper sup {
+    font-size: 30px;
+    line-height: 32px;
+    color: var(--e-global-color-white);
+    font-weight: 600;
+} 
+.aboutus_section .aboutus_content_wrapper p {
+    font-weight: 500;
+    color: var(--e-global-color-white);
+    line-height: 16px;
+}
+.aboutus_section .aboutus_content {
+    padding-left: 65px;
+    padding-top: 78px;
+}
+.aboutus_section .aboutus_content h6 {
+    color: var(--e-global-color-secondary);
+    letter-spacing: 1.6px;
+}
+.aboutus_section .aboutus_content h2 {
+    margin-bottom: 20px;
+    color: var(--e-global-color-primary);
+}
+.aboutus_section .aboutus_content p {
+    color: var(--e-global-color-text);
+    margin-bottom: 28px;
+}
+.aboutus_section .aboutus_content ul{
+    margin-bottom: 35px;
+}
+.aboutus_section .aboutus_content ul li {
+    border-right: 1px solid var(--e-global-color-light-gray);
+    padding: 0 22px;
+    display: inline-block;
+    width: 31.6%;
+}
+.aboutus_section .aboutus_content ul li:first-child {
+    padding-left: 0;
+}
+.aboutus_section .aboutus_content ul li:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+.aboutus_section .aboutus_content ul li .span_wrapper {
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.aboutus_section .aboutus_content ul li span {
+    color: var(--e-global-color-primary);
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+.aboutus_section .aboutus_content ul li .plus {
+    margin-left: -5px;
+}
+.aboutus_section .aboutus_content ul li p {
+    color: var(--e-global-color-text);
+    line-height: 20px;
+}
+.aboutus_section .aboutus_right_shape {
+    top: 205px;
+    right: 0;
+}
+.aboutus_section .aboutus_right_shape img {
+    opacity: 0.1;
+}
+
+/* Cyber Agency Home Page Services Section Style */
+
+.services_section {
+    padding: 135px 0 145px;
+    background-color: var(--e-global-color-dark-blue);
+}
+.services_section .services_content {
+    margin-bottom: 48px;
+}
+.services_section .services_content h6 {
+    color: var(--e-global-color-accent);
+    letter-spacing: 1.6px;
+}
+.services_section .services_content h2 {
+    margin-bottom: 48px;
+    color: var(--e-global-color-white);
+}
+.services_section .services_box {
+    padding: 45px 45px 35px;
+    border-right: 1px solid rgba(236, 236, 248, 0.15);
+    border-bottom: 1px solid rgba(236, 236, 248, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+.services_section .service_last_box {
+    border-right: none;
+}
+.services_section .service_lower_box{
+    border-bottom: none;
+}
+.services_section .services_box:hover {
+    background-image: linear-gradient(46deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.services_section .services_box:hover p {
+    color: var(--e-global-color-white);
+}
+.services_section .services_box:hover figure img {
+    filter: brightness(0) invert(1);
+}
+.services_section .services_box figure {
+    margin-bottom: 22px;
+    transition: all 0.3s ease-in-out;
+}
+.services_section .services_box h4 {
+    margin-bottom: 10px;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.services_section .services_box p {
+    margin-bottom: 25px;
+    color: var(--e-global-color-grayish-blue);
+    transition: all 0.3s ease-in-out;
+}
+.services_section .services_box .services_arrow {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+}
+.services_section .services_box .services_arrow img {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease-in-out;
+}
+.services_section .services_box:hover .services_arrow {
+    background-color: var(--e-global-color-white);
+    background-image: none;
+}
+.services_section .services_box:hover .services_arrow img {
+    filter: none;
+}
+.services_section .services_box .services_arrow:hover {
+    border: 1px solid var(--e-global-color-pale-blue);
+    background-color: var(--e-global-color-pale-blue);
+}
+.services_section .services_box .services_arrow:hover img {
+    filter: brightness(1) invert(0);
+}
+.services_section .services_left_shape {
+    left: 0;
+    top: 0;
+}
+.services_section .services_left_shape img {
+    opacity: 0.08;
+}
+.services_section .services_right_shape {
+    bottom: 0;
+    right: 0;
+}
+.services_section .services_right_shape img {
+    opacity: 0.08;
+}
+
+/* Cyber Agency Home Page Choose Us Section Style */
+
+.chooseus_section {
+    padding: 145px 0 150px;
+}
+.chooseus_section .chooseus_content h6{
+    color: var(--e-global-color-secondary);
+    letter-spacing: 1.6px;
+}
+.chooseus_section .chooseus_content h2{
+    margin-bottom: 30px;
+    color: var(--e-global-color-primary);
+}
+.chooseus_section .choose_list{
+    position: relative;
+    margin-bottom: 30px;
+}
+.chooseus_section .nav-tabs {
+    border-bottom: 0px solid var(--e-global-color-white);
+    margin-bottom: 20px;
+    position: relative;
+}
+.chooseus_section .nav-tabs::after {
+    content: "";
+    width: 88%;
+    height: 2px;
+    background-color: var(--e-global-color-light-gray-blue);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.chooseus_section .nav-tabs li {
+    margin: 0 20px;
+}
+.chooseus_section .nav-tabs li:first-child {
+    margin-left: 0;
+}
+.chooseus_section .nav-tabs li:last-child {
+    margin-right: 0;
+}
+.chooseus_section .tabs-box .nav-tabs li a {
+    display: inline-block;
+    color: var(--e-global-color-text);
+    border-bottom: 2px solid transparent;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 14px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+.chooseus_section .tabs-box .nav-tabs li a:hover {
+    color: var(--e-global-color-secondary);
+    border-bottom: 2px solid var(--e-global-color-accent);
+}
+.chooseus_section .tabs-box .nav-tabs li a.active{
+    color: var(--e-global-color-secondary);
+    border-bottom: 2px solid var(--e-global-color-accent);
+    z-index: 1;
+}
+.chooseus_section .tabs-box .tab-content .chooseus_content_wrapper h4 {
+    color: var(--e-global-color-primary);
+}
+.chooseus_section .tabs-box .tab-content .chooseus_content_wrapper p{
+    color: var(--e-global-color-text);
+    margin-bottom: 20px;
+    padding-right: 40px;;
+}
+.chooseus_section .chooseus_content .chooseus_content_wrapper ul {
+    display: inline-block;
+}
+.chooseus_section .chooseus_content .chooseus_content_wrapper .second_list {
+    padding-left: 15px;
+}
+.chooseus_section .chooseus_content .chooseus_content_wrapper ul li {
+    position: relative;
+    margin-bottom: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.chooseus_section .chooseus_content .chooseus_content_wrapper ul li i {
+    border-radius: 100px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--e-global-color-pale-blue);
+    color: var(--e-global-color-secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.chooseus_section .chooseus_content .tabs-box .tab-content .chooseus_content_wrapper ul li p {
+    color: var(--e-global-color-primary);
+    padding-left: 40px;
+    margin: 0;
+    padding-right: 0;
+}
+.chooseus_section .chooseus_image_wrapper .chooseus_image {
+    z-index: 1;
+}
+.chooseus_section .chooseus_image_wrapper .chooseus_shape {
+    top: -40px;
+    right: -40px;
+}
+
+/* Cyber Agency Home Page Case Studies Section Style */
+
+.case_studies_section {
+    padding: 135px 0 185px;
+    background-color: var(--e-global-color-very-pale-blue);
+}
+.case_studies_section .case_studies_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.case_studies_section .case_studies_content h2 {
+    color: var(--e-global-color-primary);
+    margin-bottom: 48px;
+} 
+.case_studies_section .case_studies_box {
+    position: relative;
+    background-image: linear-gradient(90deg, var(--e-global-color-black) 0%, var(--e-global-color-black) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.case_studies_section .case_studies_box img {
+    opacity: 0.75;
+    transition: all 0.3s ease-in-out;
+}
+.case_studies_section .case_studies_box img:hover {
+    opacity: 50%;
+}
+.case_studies_section .case_studies_box:hover figure {
+    background-image: linear-gradient(to top, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.case_studies_section .case_studies_box .case_studies_box_content {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+}
+.case_studies_section .case_studies_box .case_studies_box_content span {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    color: var(--e-global-color-white);
+    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    padding: 5px 16px;
+    margin-bottom: 22px;
+    transition: all 0.3s ease-in-out;
+}
+.case_studies_section .case_studies_box .case_studies_box_content h5 {
+    margin-bottom: 12px;
+    padding-right: 36px;
+}
+.case_studies_section .case_studies_box .case_studies_box_content a{
+    display: inline-block;
+}
+.case_studies_section .case_studies_box .case_studies_box_content figure {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+.case_studies_section .case_studies_box .case_studies_box_content figure img {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    width: auto;
+    margin: 0 auto;
+}
+.case_studies_section .case_studies_box:hover .case_studies_box_content span {
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-primary);
+}
+.case_studies_section .case_studies_box:hover .case_studies_box_content figure {
+    background-color: var(--e-global-color-white);
+    background-image: none;
+}
+.case_studies_section .case_studies_box:hover .case_studies_box_content figure img {
+    filter: none;
+}
+.case_studies_section .case_studies_box .case_studies_box_content figure:hover {   
+    border: 1px solid var(--e-global-color-pale-blue);
+    background-color: var(--e-global-color-pale-blue);
+}
+.case_studies_section .case_studies_box .case_studies_box_content figure:hover img {
+    filter: brightness(0);
+    opacity: 1;
+}
+.case_studies_section .owl-carousel .owl-dots {
+    display: block !important;
+    margin-top: 25px !important;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.case_studies_section .owl-carousel .owl-dots .owl-dot span {
+    background: var(--e-global-color-light-grayish-blue);
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+.case_studies_section .owl-carousel .owl-dots .owl-dot:hover span {
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.case_studies_section .owl-carousel .owl-dots .owl-dot.active span {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.case_studies_section .owl-carousel .owl-dots .owl-dot:focus {
+    outline: none;
+}
+
+/* Cyber Agency Home Page Video Section Style */
+
+.video_section {
+    background-color: var(--e-global-color-black);
+    padding: 268px 0 416px;
+    position: relative;
+}
+.video_section::before {
+    background: url('../images/video_section_background.jpg');
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+.video_section .video_icon .video_wrapper {
+    height: 150px;
+    width: 150px;
+    line-height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+.video_section .video_icon figure {
+    height: 116px;
+    width: 116px;
+    line-height: 116px;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-radius: 100px;
+    position: relative;
+    left: 15px;
+    top: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.video_section .video_icon figure img {
+    position: relative;
+    left: 5px;
+}
+.video_section .video_icon .video_wrapper:hover figure {
+    background-image: linear-gradient(32deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+
+/* Cyber Agency Home Page Testimonial Section Style */
+
+.testimonials-section {
+    padding: 145px 0 145px;
+}
+.testimonials-section .heading {
+    margin-bottom: -8px;
+}
+.testimonials-section .heading h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.testimonials-section .heading h2 {
+    color: var(--e-global-color-primary);
+} 
+.testimonials-section .testimonial-box {
+    padding: 45px 60px 50px 40px;
+    background-color: var(--e-global-color-white);
+    box-shadow: 0 6px 86px 20px rgb(248 247 255 / 0.58);
+}
+.testimonials-section .testimonial-box ul {
+    margin-bottom: 14px;
+}
+.testimonials-section .testimonial-box ul li {
+    display: inline-block;
+}
+.testimonials-section .testimonial-box ul li i {
+    color: var(--e-global-color-bright-yellow);
+    font-size: 13px;
+}
+.testimonials-section .testimonial-box .user-img {
+    float: left;
+    margin-right: 17px;
+    margin-top: -2px;
+}
+.testimonials-section .testimonial-box .user-img img{
+    border-radius: 100px;
+}
+.testimonials-section .testimonial-box .designation-outer {
+    display: inline-block;
+    padding-top: 2px;
+}
+.testimonials-section .testimonial-box .designation-outer .member_name {
+    color: var(--e-global-color-primary);
+    font-weight: 500;
+    line-height: 22px;
+}
+.testimonials-section .testimonial-box .designation-outer .member_designation {
+    color: var(--e-global-color-text);
+}
+.testimonials-section .testimonial-box .review {
+    color: var(--e-global-color-primary);
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 34px;
+}
+.testimonials-section .testimonial-box .quote-img {
+    top: 0;
+    right: -5px;
+}
+.testimonials-section .owl-carousel .owl-stage-outer {
+    padding: 50px 0;
+}
+.testimonials-section .owl-carousel .owl-dots {
+    display: block !important;
+    margin-top: -22px !important;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.testimonials-section .owl-carousel .owl-dots .owl-dot span {
+    background: var(--e-global-color-light-grayish-blue);
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+.testimonials-section .owl-carousel .owl-dots .owl-dot:hover span {
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.testimonials-section .owl-carousel .owl-dots .owl-dot.active span {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.testimonials-section .owl-carousel .owl-dots .owl-dot:focus {
+    outline: none;
+}
+.testimonials-section .testimonial_left_shape {
+    left: 0;
+    top: 160px;
+    z-index: -1;
+}
+.testimonials-section .testimonial_left_shape img {
+    opacity: 0.1;
+}
+
+/* Cyber Agency Home Page News & Articles Section Style */
+
+.news_articles_section {
+    padding: 135px 0 140px;
+    background-color: var(--e-global-color-very-pale-blue);
+}
+.news_articles_section .news_articles_content {
+    text-align: center;
+}
+.news_articles_section .news_articles_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.news_articles_section .news_articles_content h2 {
+    margin-bottom: 48px;
+    color: var(--e-global-color-primary);
+}
+.news_articles_section .news_articles_box {
+    background-color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.news_articles_section .news_articles_box .news_articles_box_content {
+    padding: 28px 52px 28px 36px;
+}
+.news_articles_section .news_articles_box .news_articles_box_content .span_wrapper {
+    margin-bottom: 5px;
+}
+.news_articles_section .news_articles_box .news_articles_box_content .span_wrapper span {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    color: var(--e-global-color-secondary);
+}
+.news_articles_section .news_articles_box .news_articles_box_content .span_wrapper .dash {
+    padding-left: 4px;
+}
+.news_articles_section .news_articles_box .news_articles_box_content h5 {
+    line-height: 23px;
+    color: var(--e-global-color-primary);
+}
+.news_articles_section .news_articles_box .news_articles_box_content p {
+    margin-bottom: 17px;
+    color: var(--e-global-color-text);
+}
+.news_articles_section .news_articles_box:hover h5 {
+    color: var(--e-global-color-accent);
+}
+.news_articles_section .news_articles_box figure {
+    overflow: hidden;
+    background-color: var(--e-global-color-black);
+}
+.news_articles_section .news_articles_box figure img {
+    transition: all 0.3s ease-in-out;
+}
+.news_articles_section .news_articles_box:hover figure img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+.news_articles_section .news_articles_box .news_articles_box_content i {
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--e-global-color-primary);
+    transition: all 0.3s ease-in-out;
+}
+.news_articles_section .news_articles_box:hover .news_articles_box_content i {
+    color: var(--e-global-color-accent);
+}
+
+/* Cyber Agency Home Page Footer Section Style */
+
+.footer_section{
+    background-color: var(--e-global-color-dark-blue);
+}
+.footer_section .about_contact_wrapper {
+    background-image: linear-gradient(46deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    padding: 60px 52px 55px 60px;
+}
+.footer_section .about_contact_wrapper figure {
+    margin-bottom: 26px;
+    display: inline-block;
+}
+.footer_section .about_contact_wrapper p {
+    line-height: 21px;
+    color: var(--e-global-color-white);
+}
+.footer_section .about_contact_wrapper ul .contact_mail {
+    margin-bottom: 10px;
+}
+.footer_section .about_contact_wrapper ul li{
+    margin-bottom: 12px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;    
+    display: inline-block;
+}
+.footer_section .about_contact_wrapper ul li i {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.footer_section .about_contact_wrapper ul li a {
+    padding-left: 30px;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.footer_section .about_contact_wrapper ul li span {
+    line-height: 20px;
+    color: var(--e-global-color-white);
+    padding-left: 30px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.footer_section .about_contact_wrapper ul li:hover span {
+    color: var(--e-global-color-accent);
+}
+.footer_section .about_contact_wrapper ul li:hover a {
+    color: var(--e-global-color-accent);
+}
+.footer_section .about_contact_wrapper ul li:hover i {
+    color: var(--e-global-color-accent);
+}
+.footer_section ul li a {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    color: var(--e-global-color-grayish-blue);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.footer_section ul li a:hover{
+    color: var(--e-global-color-accent);
+}
+.footer_section .navigation_col {
+    padding-top: 72px;
+    padding-left: 30px;
+}
+.footer_section .navigation_col ul li {
+    margin-bottom: 6px;
+}
+.footer_section .navigation_col ul li:last-child {
+    margin-bottom: 0;
+}
+.footer_section h4{
+    color: var(--e-global-color-white);
+    margin-bottom: 12px;
+}
+.footer_section .services_col {
+    padding-top: 72px;
+}
+.footer_section .services_col ul li {
+    margin-bottom: 6px;
+}
+.footer_section .services_col ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer_section .newsletter_content {
+    padding-top: 72px;
+}
+.footer_section .newsletter_content h4 {
+    margin-bottom: 20px;
+}
+.footer_section .newsletter_content form .form-row {
+    margin: 0;
+}
+.footer_section .newsletter_content input {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-text);
+    outline: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    height: 55px;
+    width: 100%;
+    padding: 10px 18px;
+    margin-bottom: 25px;
+    border-radius: 0;
+}
+.footer_section .newsletter_content input::placeholder{
+    color: var(--e-global-color-text);
+}
+.footer_section .newsletter_content input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--e-global-color-accent);
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-text);
+}
+.footer_section .newsletter_content .btn {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    font-size: 16px;
+    height: 45px;
+    width: 47px;
+    line-height: 42px;
+    text-align: center;
+    padding: 0;
+    border-radius: 0;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    color: var(--e-global-color-white);
+    outline: none;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+    border: 0;
+}
+.footer_section .newsletter_content .btn:hover{
+    background-image: linear-gradient(32deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+.footer_section .newsletter_content h6 {
+    font-weight: 500;
+    color: var(--e-global-color-white);
+}
+.footer_section .newsletter_content ul li {
+    display: inline-block;
+}
+.footer_section .newsletter_content ul li i {
+    color: var(--e-global-color-white);
+    font-size: 16px;
+    margin-right: 8px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    height: 46px;
+    width: 46px;
+    line-height: 46px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.footer_section .newsletter_content ul li i:hover{
+    background-color: var(--e-global-color-accent);
+    border: 1px solid var(--e-global-color-accent);
+}
+.footer_section .bottom_portion {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+.footer_section .bottom_portion .copyright {
+    padding: 20px 0;
+}
+.footer_section .bottom_portion .copyright p{
+    color: var(--e-global-color-grayish-blue);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0;
+}
+.footer_section .bottom_portion .copyright p span {
+    color: var(--e-global-color-accent);
+}
+
+/* Cyber Security Home Page Style */
+
+/* Cyber Security Home Page Banner Section Style */
+
+.banner-section-security {
+    background-color: var(--e-global-color-dark-blue);
+    position: relative;
+}
+.banner-section-security::before {
+    background: url(../images/statistics_background_layer.png);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+}
+.banner-section-security .banner_left_shape {
+    left: 0;
+    top: 0;
+}
+.banner-section-security .banner_left_shape img {
+    opacity: 0.1;
+}
+.banner-section-security .banner_right_shape {
+    right: 0;
+    bottom: 0;
+}
+.banner-section-security .banner_right_shape img {
+    opacity: 0.1;
+}
+.banner-section-security .banner-section{
+    padding: 192px 280px 230px;
+}
+.banner-section-security .banner-section .banner-content h6 {
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 70px;
+}
+.banner-section-security .banner-section .banner-content h6::before {
+    content: "";
+    height: 1px;
+    width: 56px;
+    background-color: var(--e-global-color-grayish-red);
+    position: absolute;
+    bottom: 12px;
+    left: 2px;
+    transition: all 0.3s ease-in-out;
+}
+.banner-section-security .banner-section .banner-content h1 {
+    font-size: 68px;
+    line-height: 74px;
+    margin-bottom: 22px;
+    margin-right: -20px;
+}
+.banner-section-security .banner-section .banner-content p {
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+.banner-section-security .banner-section .banner-content .btn_wrapper a {
+    margin-right: 12px;
+}
+.banner-section-security .banner-section .banner-content .btn_wrapper .learn_more {
+    padding: 19px 42px;
+    border: 1px solid var(--e-global-color-dark-gray);
+    background: transparent;
+    margin-right: 0;
+}
+.banner-section-security .banner-section .banner-content .btn_wrapper .learn_more:hover {
+    color: var(--e-global-color-white);
+    background-image: linear-gradient(90deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+    border-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border: 1px solid var(--e-global-color-secondary);
+}
+.banner-section-security .banner-section .banner-content .btn_wrapper .play-icon {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--e-global-color-white);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    padding-left: 68px;
+}
+.banner-section-security .banner-section .banner-content .btn_wrapper .play-icon figure {
+    height: 57px;
+    width: 57px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-image: none;
+    border-image: none;
+    position: absolute;
+    top: -22px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+.banner-section-security .banner-section .banner-content .btn_wrapper .play-icon:hover {
+    color: var(--e-global-color-accent);
+}
+.banner-section-security .banner-section .banner-content .btn_wrapper .play-icon:hover figure {
+    background-image: linear-gradient(33deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-image: linear-gradient(33deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border: 1px solid var(--e-global-color-secondary);
+}
+.banner-section-security .banner-section .banner_wrapper {
+    position: relative;
+}
+.banner-section-security .banner-section .banner_wrapper .banner-image {
+    position: absolute;
+    top: -140px;
+    right: -205px;
+}
+
+/* Cyber Security Home Page Trusted Section Style */
+
+.trusted_section {
+    padding: 75px 0 70px;
+    background-color: var(--e-global-color-very-dark-blue);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.trusted_section .trusted_content h3 {
+    color: var(--e-global-color-white);
+    margin-bottom: 0;
+}
+.trusted_section .trusted_images_wrapper ul{
+    padding-left: 6px;
+}
+.trusted_section .trusted_images_wrapper ul li {
+    display: inline-block;
+    margin: 0 34px;
+}
+.trusted_section .trusted_images_wrapper ul li:first-child {
+    margin-left: 0;
+}
+.trusted_section .trusted_images_wrapper ul li:last-child {
+    margin-right: 0;
+}
+
+/* Cyber Security Home Page Services Section Style */
+
+.cyber_security_services_section {
+    padding: 135px 0 140px;
+    background-color: var(--e-global-color-very-dark-blue);
+}
+.cyber_security_services_section .cyber_security_services_content h6 {
+    color: var(--e-global-color-accent);
+    letter-spacing: 1.6px;
+}
+.cyber_security_services_section .cyber_security_services_content h2 {
+    margin-bottom: 48px;
+    color: var(--e-global-color-white);
+}
+.cyber_security_services_section .cyber_security_services_box {
+    padding: 40px 15px;
+    background-color: var(--e-global-color-mostly-black);
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_services_section .cyber_security_services_box:hover {
+    background-image: linear-gradient(46deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.cyber_security_services_section .cyber_security_services_box:hover p {
+    color: var(--e-global-color-white);
+}
+.cyber_security_services_section .cyber_security_services_box .cyber_security_services_image {
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-radius: 100%;
+    height: 106px;
+    width: 106px;
+    line-height: 106px;
+    text-align: center;
+    margin: 0 auto 26px;
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_services_section .cyber_security_services_box:hover .cyber_security_services_image {
+    background-color: rgba(255, 255, 255, 0.15);
+    background-image: none;
+}
+.cyber_security_services_section .cyber_security_services_box h5 {
+    margin-bottom: 10px;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_services_section .cyber_security_services_box p {
+    margin-bottom: 27px;
+    color: var(--e-global-color-grayish-blue);
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_services_section .cyber_security_services_box .services_arrow {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+.cyber_security_services_section .cyber_security_services_box .services_arrow img {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_services_section .cyber_security_services_box:hover .services_arrow {
+    background-color: var(--e-global-color-white);
+    background-image: none;
+}
+.cyber_security_services_section .cyber_security_services_box:hover .services_arrow img {
+    filter: none;
+}
+.cyber_security_services_section .cyber_security_services_box .services_arrow:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: var(--e-global-color-pale-blue);
+}
+.cyber_security_services_section .cyber_security_services_box .services_arrow:hover img {
+    filter: brightness(0);
+}
+
+/* Cyber Security Home Page Reliable Section Style */
+
+.reliable_section {
+    padding: 155px 0;
+    background-color: var(--e-global-color-dark-blue);
+    position: relative;
+    overflow: hidden;
+}
+.reliable_section::before {
+    background: url('../images/reliable_background_layer.png');
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+}
+.reliable_section .reliable_left_shape {
+    left: 0;
+    bottom: 0;
+}
+.reliable_section .reliable_left_shape img {
+    opacity: 0.1;
+}
+.reliable_section .reliable_right_shape {
+    top: 0;
+    right: 0;
+}
+.reliable_section .reliable_right_shape img {
+    opacity: 0.1;
+}
+.reliable_section .reliable_wrapper{
+    position: relative;
+    z-index: 1;
+}
+.reliable_section .reliable_wrapper .reliable-image{
+    position: absolute;
+    left: -255px;
+    top: -34px;
+}
+.reliable_section .reliable_content{
+    position: relative;
+    margin-left: -35px;
+    z-index: 1;
+}
+.reliable_section .reliable_content h6{
+    color: var(--e-global-color-accent);
+    letter-spacing: 1.6px;
+}
+.reliable_section .reliable_content h2{
+    color: var(--e-global-color-white);
+    margin-bottom: 22px;
+}
+.reliable_section .reliable_content .text1{
+    margin-bottom: 22px;
+    color: var(--e-global-color-grayish-blue);
+}
+.reliable_section .reliable_content .text2{
+    margin-bottom: 46px;
+    color: var(--e-global-color-grayish-blue);
+}
+.reliable_section .reliable_content .progress-outer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -50px;
+}
+.reliable_section .reliable_content .progress-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 166px);
+    grid-gap: 0;
+    margin: 0;
+}
+.reliable_section .reliable_content .progress-inner .box {
+    width: 100%;
+}
+.reliable_section .reliable_content .progress-inner .box .chart {
+    position: relative;
+    width: 256px;
+    height: 142px;
+    line-height: 118px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--e-global-color-white);
+    margin-bottom: 0;
+}
+.reliable_section .reliable_content .progress-inner .box canvas {
+    position: absolute;
+    top: -4px;
+    left: 63px;
+    width: 50%;
+}
+.reliable_section .reliable_content .progress-inner .box h6 {
+    font-weight: 600;
+    letter-spacing: 0 !important;
+    margin-bottom: 0;
+    color: var(--e-global-color-white);
+    position: relative;
+    right: -62px;
+}
+.reliable_section .reliable_content .progress-inner .box .heading2 {
+    right: -80px;
+}
+
+/* Cyber Security Home Page Pricing Plans Section Style */
+
+.pricing_plan_section {
+    padding: 135px 0 140px;
+    background-color: var(--e-global-color-very-dark-blue);
+}
+.pricing_plan_section .pricing_plan_content {
+    text-align: center;
+}
+.pricing_plan_section .pricing_plan_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-accent);
+}
+.pricing_plan_section .pricing_plan_content h2 {
+    color: var(--e-global-color-white);
+    margin-bottom: 50px;
+}
+.pricing_plan_section .pricing_plan_box {
+    background: var(--e-global-color-mostly-black);
+    padding: 65px 40px 50px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.pricing_plan_section .pricing_plan_box figure {
+    margin-bottom: 30px;
+}
+.pricing_plan_section .pricing_plan_box h5 {
+    color: var(--e-global-color-white);
+}
+.pricing_plan_section .pricing_plan_box span {
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 600;
+    color: var(--e-global-color-accent);
+    display: block;
+    margin-bottom: 10px;
+}
+.pricing_plan_section .pricing_plan_box .month {
+    font-weight: 400;
+    color: var(--e-global-color-grayish-blue);
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 32px;
+}
+.pricing_plan_section .pricing_plan_box .month::after {
+    content: "";
+    height: 1px;
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.pricing_plan_section .pricing_plan_box ul {
+    padding-left: 25px;
+}
+.pricing_plan_section .pricing_plan_box ul li {
+    position: relative;
+    margin-bottom: 16px;
+}
+.pricing_plan_section .pricing_plan_box ul li i {
+    border-radius: 100%;
+    background-color: var(--e-global-color-accent);
+    color: var(--e-global-color-mostly-black);
+    font-size: 12px;
+    line-height: 18px;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.pricing_plan_section .pricing_plan_box ul li p {
+    margin-bottom: 0;
+    padding-left: 32px;
+    text-align: left;
+    line-height: 20px;
+    color: var(--e-global-color-grayish-blue);
+    transition: all 0.3s ease-in-out;
+}
+.pricing_plan_section .pricing_plan_box ul li:last-child {
+    margin-bottom: 30px;
+}
+.pricing_plan_section .pricing_plan_box .btn_wrapper a {
+    padding: 18px 37px;
+}
+
+/* Cyber Security Home Page Statistics Section Style */
+
+.statistics_section {
+    padding: 135px 0 110px;
+    background-color: var(--e-global-color-dark-blue);
+    position: relative;
+}
+.statistics_section::before {
+    background: url('../images/statistics_background_layer.png');
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+}
+.statistics_section .statistics_outer_wrapper {
+    position: relative;
+    z-index: 1;
+}
+.statistics_section .statistics_content {
+    padding-top: 8px;
+}
+.statistics_section .statistics_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-accent);
+}
+.statistics_section .statistics_content h2 {
+    margin-bottom: 22px;
+    color: var(--e-global-color-white);
+}
+.statistics_section .statistics_content p {
+    color: var(--e-global-color-grayish-blue);
+    padding-right: 30px;
+}
+.statistics_section .statistics_outer .statistics_box {
+    background-color: var(--e-global-color-mostly-black-blue);
+    padding: 30px 15px 40px 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.statistics_section .statistics_outer .statistics_box .statistics_image {
+    float: left;
+    width: 39%;
+}
+.statistics_section .statistics_outer .statistics_box .statistics_image figure {
+    height: 81px;
+    width: 81px;
+    line-height: 70px;
+    text-align: center;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.statistics_section .statistics_outer .statistics_box .statistics_box_content {
+    display: inline-block;
+    width: 61%;
+    padding-left: 14px;
+    padding-top: 8px;
+}
+.statistics_section .statistics_outer .statistics_box .statistics_box_content span {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 600;
+    color: var(--e-global-color-white);
+    margin-bottom: 3px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.statistics_section .statistics_outer .statistics_box .statistics_box_content p {
+    color: var(--e-global-color-grayish-blue);
+}
+.statistics_section .statistics_left_shape {
+    left: 0;
+    top: 0;
+}
+.statistics_section .statistics_left_shape img {
+    opacity: 0.1;
+}
+.statistics_section .statistics_right_shape {
+    bottom: 0;
+    right: 0;
+}
+.statistics_section .statistics_right_shape img {
+    opacity: 0.1;
+}
+
+/* Cyber Security Home Page Testimonial Section Style */
+
+.security_testimonial_section {
+    padding: 165px 0 162px;
+    background-color: var(--e-global-color-very-dark-blue);
+}
+.security_testimonial_section .testimonial_content{
+    padding-left: 60px;
+}
+.security_testimonial_section .heading {
+    margin-bottom: 22px;
+    padding-top: 5px;
+}
+.security_testimonial_section .heading h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-accent);
+}
+.security_testimonial_section .heading h2 {
+    color: var(--e-global-color-white);
+    margin-right: 20px;
+}
+.security_testimonial_section .testimonial-box p{
+    color: var(--e-global-color-grayish-blue);
+    font-weight: 400;
+    margin-bottom: 28px;
+}
+.security_testimonial_section .testimonial-box .info ul {
+    margin-bottom: 6px;
+}
+.security_testimonial_section .testimonial-box .info ul li {
+    display: inline-block;
+}
+.security_testimonial_section .testimonial-box .info ul li i {
+    color: var(--e-global-color-bright-yellow);
+    font-size: 12px;
+}
+.security_testimonial_section .testimonial-box .info h6{
+    letter-spacing: 0 !important;
+    color: var(--e-global-color-white);
+}
+.security_testimonial_section .dotted_circle{
+    border: 2px dashed var(--e-global-color-very-dark-grayish-blue);
+    height: 410px;
+    width: 410px;
+    z-index: 1;
+    border-radius: 100%;
+    margin-top: -26px;
+}
+.security_testimonial_section .dotted_circle .icon {
+    width: 261px;
+    height: 261px;
+    line-height: 261px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    background-color: var(--e-global-color-very-dark-mostly-black-blue);
+    border-radius: 100%;
+}
+.security_testimonial_section .dotted_circle .icon .testimonial_image{
+    width: 191px;
+    height: 191px;
+    line-height: 191px;
+    top: 34px;
+    left: 34px;
+    text-align: center;
+    background-image: linear-gradient(90deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-radius: 100px;
+}
+.security_testimonial_section .dotted_circle .image img{
+    border-radius: 100px;
+}
+.security_testimonial_section .dotted_circle .testimonial_image1{
+    top: 8px;
+    left: 18px;
+    transition: all 0.3s ease-in-out;
+}
+.security_testimonial_section .dotted_circle .testimonial_image2{
+    top: 155px;
+    right: -53px;
+    transition: all 0.3s ease-in-out;
+}
+.security_testimonial_section .dotted_circle .testimonial_image3{
+    bottom: -32px;
+    left: 77px;
+    transition: all 0.3s ease-in-out;
+}
+.security_testimonial_section .dotted_circle .testimonial_circle1{
+    top: 5px;
+    right: 72px;
+    transition: all 0.3s ease-in-out;
+}
+.security_testimonial_section .dotted_circle .testimonial_circle2{
+    bottom: 12px;
+    right: 60px;
+    transition: all 0.3s ease-in-out;
+}
+.security_testimonial_section .dotted_circle .testimonial_circle3{
+    top: 245px;
+    left: -20px;
+    transition: all 0.3s ease-in-out;
+}
+.security_testimonial_section .dotted_circle .testimonial_image1:hover{
+    transform: translateY(-10px);
+}
+.security_testimonial_section .dotted_circle .testimonial_image2:hover{
+    transform: translateY(-10px);
+}
+.security_testimonial_section .dotted_circle .testimonial_image3:hover{
+    transform: translateY(-10px);
+}
+.security_testimonial_section .dotted_circle .testimonial_circle1:hover{
+    transform: translateY(-10px);
+}
+.security_testimonial_section .dotted_circle .testimonial_circle2:hover{
+    transform: translateY(-10px);
+}
+.security_testimonial_section .dotted_circle .testimonial_circle3:hover{
+    transform: translateY(-10px);
+}
+.security_testimonial_section .owl-carousel .owl-dots {
+    display: block !important;
+    margin-top: -25px !important;
+    position: absolute;
+    left: 0;
+}
+.security_testimonial_section .owl-carousel .owl-dots .owl-dot span {
+    background: var(--e-global-color-light-grayish-blue);
+    width: 19px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+.security_testimonial_section .owl-carousel .owl-dots .owl-dot:hover span {
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.security_testimonial_section .owl-carousel .owl-dots .owl-dot.active span {
+    width: 29px;
+    height: 4px;
+    border-radius: 2px;
+    position: relative;
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.security_testimonial_section .owl-carousel .owl-dots .owl-dot:focus {
+    outline: none;
+}
+
+/* Cyber Security Home Page Blog Posts Section Style */
+
+.blog_posts_section {
+    padding: 135px 0 140px;
+    background-color: var(--e-global-color-dark-blue);
+    position: relative;
+}
+.blog_posts_section::before {
+    background: url('../images/blog_posts_background_layer.png');
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+}
+.blog_posts_section .blog_posts_outer_wrapper {
+    position: relative;
+    z-index: 1;
+}
+.blog_posts_section .blog_posts_content {
+    text-align: center;
+}
+.blog_posts_section .blog_posts_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-accent);
+}
+.blog_posts_section .blog_posts_content h2 {
+    margin-bottom: 50px;
+    color: var(--e-global-color-white);
+}
+.blog_posts_section .blog_posts_box {
+    transition: all 0.3s ease-in-out;
+}
+.blog_posts_section .blog_posts_box figure {
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: var(--e-global-color-black);
+}
+.blog_posts_section .blog_posts_box figure img {
+    transition: all 0.3s ease-in-out
+}
+.blog_posts_section .blog_posts_box .span_wrapper {
+    margin-bottom: 8px;
+}
+.blog_posts_section .blog_posts_box .span_wrapper span {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    color: var(--e-global-color-accent);
+}
+.blog_posts_section .blog_posts_box .span_wrapper .dash {
+    padding-left: 4px;
+}
+.blog_posts_section .blog_posts_box h5 {
+    line-height: 23px;
+    padding-right: 25px;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out
+}
+.blog_posts_section .blog_posts_box p {
+    padding-right: 110px;
+    color: var(--e-global-color-grayish-blue);
+}
+.blog_posts_section .blog_posts_box:hover figure img {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+.blog_posts_section .blog_posts_box:hover h5 {
+    color: var(--e-global-color-accent);
+}
+.blog_posts_section .blog_posts_left_shape {
+    left: 0;
+    bottom: 0;
+}
+.blog_posts_section .blog_posts_left_shape img {
+    opacity: 0.1;
+}
+.blog_posts_section .blog_posts_right_shape {
+    top: 0;
+    right: 0;
+}
+.blog_posts_section .blog_posts_right_shape img {
+    opacity: 0.1;
+}
+
+/* Cyber Security Home Page Get In Touch Section Style */
+
+.get_in_touch_section {
+    padding: 135px 0 140px;
+    background-color: var(--e-global-color-very-dark-blue);
+}
+.get_in_touch_section .get_in_touch_content {
+    text-align: center;
+}
+.get_in_touch_section .get_in_touch_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-accent);
+}
+.get_in_touch_section .get_in_touch_content h2 {
+    margin-bottom: 50px;
+    color: var(--e-global-color-white);
+}
+.get_in_touch_section .get_in_touch_form_content span {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    margin-top: 0;
+    top: -10px;
+    left: 5px;
+    position: relative;
+    display: block;
+    color: var(--e-global-color-pure-red);
+}
+.get_in_touch_section .get_in_touch_form_content input {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: var(--e-global-color-mostly-black);
+    color: var(--e-global-color-grayish-blue);
+    padding: 15px 26px;
+    height: 58px;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 18px;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: none;    
+    transition: all 0.3s ease-in-out;
+}
+.get_in_touch_section .get_in_touch_form_content textarea {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: var(--e-global-color-mostly-black);
+    color: var(--e-global-color-grayish-blue);
+    padding: 15px 26px;
+    resize: none;
+    height: 132px;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 50px;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+}
+.get_in_touch_section .get_in_touch_form_content input:focus{
+    box-shadow: none;
+    border: 1px solid var(--e-global-color-grayish-blue);
+}
+.get_in_touch_section .get_in_touch_form_content textarea:focus{
+    border: 1px solid var(--e-global-color-grayish-blue);
+}
+.get_in_touch_section .get_in_touch_form_content .form-control::placeholder { 
+    color: var(--e-global-color-grayish-blue);
+}
+.get_in_touch_section .get_in_touch_form_content .form_button_wrapper button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 20px 40px;
+    color: var(--e-global-color-white);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Cyber Security Home Page Footer Section Style */
+
+.cyber_security_footer_section {
+    background-color: var(--e-global-color-mostly-black);
+    padding-top: 70px;
+    position: relative;
+}
+.cyber_security_footer_section .middle_portion {
+    margin-bottom: 72px;
+}
+.cyber_security_footer_section .about_col {
+    padding-left: 80px;
+    padding-top: 8px;
+}
+.cyber_security_footer_section .about_col figure {
+    margin-bottom: 26px;
+    display: inline-block;
+}
+.cyber_security_footer_section .about_col p {
+    line-height: 21px;
+    margin-bottom: 10px;
+    color: var(--e-global-color-grayish-blue);
+}
+.cyber_security_footer_section ul li a {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    color: var(--e-global-color-grayish-blue);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_footer_section .navigation_col {
+    padding-left: 40px;
+}
+.cyber_security_footer_section .navigation_col ul li {
+    margin-bottom: 6px;
+    position: relative;
+}
+.cyber_security_footer_section .navigation_col ul li:last-child {
+    margin-bottom: 0;
+}
+.cyber_security_footer_section .navigation_col ul li a {
+    padding-left: 22px;
+}
+.cyber_security_footer_section .navigation_col ul li i {
+    font-family: 'FontAwesome';
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.cyber_security_footer_section .navigation_col ul li:hover a {
+    color: var(--e-global-color-accent);
+}
+.cyber_security_footer_section .navigation_col ul li:hover i {
+    color: var(--e-global-color-accent);
+}
+.cyber_security_footer_section h4{
+    color: var(--e-global-color-white);
+    margin-bottom: 12px;
+}
+.cyber_security_footer_section .services_col {
+        padding-left: 15px;
+}
+.cyber_security_footer_section .services_col ul li {
+    margin-bottom: 6px;
+    position: relative;
+}
+.cyber_security_footer_section .services_col ul li:last-child {
+    margin-bottom: 0;
+}
+.cyber_security_footer_section .services_col ul li a {
+    padding-left: 22px;
+}
+.cyber_security_footer_section .services_col ul li i {
+    font-family: 'FontAwesome';
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.cyber_security_footer_section .services_col ul li:hover a {
+    color: var(--e-global-color-accent);
+}
+.cyber_security_footer_section .services_col ul li:hover i {
+    color: var(--e-global-color-accent);
+}
+.cyber_security_footer_section .newsletter_content {
+    padding-left: 72px;
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list {
+    margin-bottom: 18px;
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list li{
+    margin-bottom: 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list li i {
+    position: absolute;
+    font-size: 16px;
+    top: 4px;
+    left: 0;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list li a {
+    padding-left: 30px;
+    color: var(--e-global-color-grayish-blue);
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list li span {
+    line-height: 20px;
+    color: var(--e-global-color-grayish-blue);
+    padding-left: 30px;
+    padding-right: 52px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list li:hover span {
+    color: var(--e-global-color-accent);
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list li:hover a {
+    color: var(--e-global-color-accent);
+}
+.cyber_security_footer_section .newsletter_content .contact_info_list li:hover i {
+    color: var(--e-global-color-accent);
+}
+.cyber_security_footer_section .newsletter_content .social_icons li {
+    display: inline-block;
+}
+.cyber_security_footer_section .newsletter_content .social_icons li i {
+    color: var(--e-global-color-white);
+    font-size: 14px;
+    margin-right: 8px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-image: none;
+    background-image: none;
+    border-radius: 100px;
+    height: 44px;
+    width: 44px;
+    line-height: 44px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_footer_section .newsletter_content .social_icons li i:hover{
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border: 1px solid var(--e-global-color-secondary);
+}
+.cyber_security_footer_section .bottom_portion {
+    text-align: center;
+    position: relative;
+    border-top: 1px solid var(--e-global-color-very-dark-grayish-blue);
+}
+.cyber_security_footer_section .bottom_portion .copyright {
+    padding: 20px 0;
+}
+.cyber_security_footer_section .bottom_portion .copyright p{
+    color: var(--e-global-color-grayish-blue);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0;
+}
+.cyber_security_footer_section .bottom_portion .copyright p span {
+    color: var(--e-global-color-accent);
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_footer_section .footer_shape {
+    bottom: 0;
+    left: 0;
+}
+.cyber_security_footer_section .footer_shape img {
+    opacity: 0.08;
+}
+.cyber_security_footer_section .footer_popup{
+    position: absolute;
+    right: 36px;
+    bottom: 115px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+.cyber_security_footer_section .footer_popup:hover{
+    transform: translateY(-5px);
+}
+.cyber_security_footer_section #fixed-form-container{
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    width: 25%;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+}
+.cyber_security_footer_section #fixed-form-container .body{
+    box-shadow: 1px 1px 57px rgb(95 208 243 / 15%);
+    border-radius: 5px;
+    width: 60%;
+    padding: 20px 20px 30px;
+    background-color: var(--e-global-color-very-dark-blue);
+    text-align: center;
+    position: relative;
+    right: -120px;
+    top: -232px;
+    z-index: 1;
+    display: none;
+}
+.cyber_security_footer_section #fixed-form-container .body span {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    margin-top: -8px;
+    top: 0;
+    left: 0;
+    text-align: left;
+    position: relative;
+    display: block;
+    color: var(--e-global-color-pure-red);
+}
+.cyber_security_footer_section #fixed-form-container .body input {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: var(--e-global-color-mostly-black);
+    color: var(--e-global-color-grayish-blue);
+    padding: 15px 20px;
+    height: 48px;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 18px;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+    overflow: visible;
+}
+.cyber_security_footer_section #fixed-form-container .body textarea {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: var(--e-global-color-mostly-black);
+    color: var(--e-global-color-grayish-blue);
+    padding: 15px 20px;
+    resize: none;
+    height: 115px;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+    overflow: auto;
+}
+.cyber_security_footer_section #fixed-form-container .body input:focus{
+    box-shadow: none;
+    border: 1px solid var(--e-global-color-grayish-blue);
+}
+.cyber_security_footer_section #fixed-form-container .body textarea:focus{
+    border: 1px solid var(--e-global-color-grayish-blue);
+}
+.cyber_security_footer_section #fixed-form-container .body .submit_now {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 16px 25px;
+    color: var(--e-global-color-white);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+/* CCTV Secure Home Page Style */
+
+/* CCTV Secure Home Page Banner Section Style */
+
+.banner-section-secure {
+    background-color: var(--e-global-color-black);
+    position: relative;
+    overflow: hidden;
+}
+.banner-section-secure::before {
+    background: url('../images/banner3-image.jpg');
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 30%;
+}
+ 
+/*  Social Icons Section Style */
+
+.banner-section-secure .banner_content-section {
+    position: relative;
+}
+.banner-section-secure .left_icons {
+    top: 114px;
+    left: -307px;
+    position: absolute;
+    z-index: 1;
+}
+.banner-section-secure .left_icons ul li {
+    display: block;
+    padding-bottom: 5px;
+}
+.banner-section-secure .left_icons ul li i {
+    border-radius: 100%;
+    background: transparent;
+    color: var(--e-global-color-white);
+    font-size: 20px;
+    line-height: 51px;
+    height: 51px;
+    width: 51px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.banner-section-secure .left_icons i:hover {
+    background-image: linear-gradient(33deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+ 
+ /* CCTV Secure Home Page Banner Section Style */
+
+.banner-section-secure .banner-section{
+    padding: 122px 0 43px;
+}
+.banner-section-secure .banner-section .banner-content{
+    text-align: center;
+}
+.banner-section-secure .banner-section .banner-content .banner3_logo_image{
+    margin-bottom: 26px;
+}
+.banner-section-secure .banner-section .banner-content h6 {
+    letter-spacing: 1.6px;
+    margin-bottom: 6px;
+    color: var(--e-global-color-white);
+}
+.banner-section-secure .banner-section .banner-content h1 {
+    font-size: 70px;
+    line-height: 76px;
+    margin-bottom: 22px;
+    color: var(--e-global-color-white);
+}
+.banner-section-secure .banner-section .banner-content p {
+    padding: 0 170px;
+    margin-bottom: 30px;    
+    color: var(--e-global-color-white);
+}
+.banner-section-secure .banner-section .banner-content .btn_wrapper{
+    margin-bottom: 154px;
+}
+.banner-section-secure .banner-section .banner-content .btn_wrapper a {
+    margin-right: 12px;
+}
+.banner-section-secure .banner-section .banner-content .btn_wrapper .learn_more {
+    padding: 19px 42px;
+    border: 1px solid var(--e-global-color-light-gray);
+    background: transparent;
+    margin-right: 0;
+}
+.banner-section-secure .banner-section .banner-content .btn_wrapper .learn_more:hover {
+    color: var(--e-global-color-white);
+    background-image: linear-gradient(90deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+    border-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border: 1px solid var(--e-global-color-secondary);
+}
+
+/* CCTV Secure Home Page About Us Section Style */
+
+.secure_about-section {
+    padding: 140px 0;
+}
+.secure_about-section .aboutus_images_wrapper{
+    position: relative;
+}
+.secure_about-section .aboutus_images_wrapper .about-image1 {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    right: -40px;
+    background: var(--e-global-color-black);
+}
+.secure_about-section .aboutus_images_wrapper .about-image1 img{
+    opacity: 95%;
+}
+.secure_about-section .aboutus_images_wrapper .about-image2 {
+    position: absolute;
+    bottom: 0;
+    left: -36px;
+    background: var(--e-global-color-black);
+    border-top: 10px solid var(--e-global-color-white);
+    border-right: 10px solid var(--e-global-color-white);
+}
+.secure_about-section .aboutus_images_wrapper .about-image2 img{
+    opacity: 60%;
+}
+.secure_about-section .aboutus_images_wrapper .play-image {
+    width: 82px;
+    height: 82px;
+    line-height: 82px;
+    bottom: 76px;
+    left: 77px;
+    position: absolute;
+    text-align: center;
+    border-radius: 100px;
+    background-image: linear-gradient(90deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.secure_about-section .aboutus_images_wrapper .play-image:hover{
+    background-image: linear-gradient(90deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+.secure_about-section .aboutus_content {
+    padding-left: 32px;
+    padding-top: 70px;
+}
+.secure_about-section .aboutus_content h6 {
+    color: var(--e-global-color-secondary);
+    letter-spacing: 1.6px;
+}
+.secure_about-section .aboutus_content h2 {
+    margin-bottom: 20px;
+    color: var(--e-global-color-primary);
+}
+.secure_about-section .aboutus_content p {
+    margin-bottom: 18px;
+    padding-right: 30px;
+    color: var(--e-global-color-text);
+}
+.secure_about-section .aboutus_content ul {
+    margin-bottom: 35px;
+}
+.secure_about-section .aboutus_content ul li {
+    position: relative;
+    margin-bottom: 13px;
+}
+.secure_about-section .aboutus_content ul li i {
+    border-radius: 100%;
+    background-color: var(--e-global-color-primary);
+    color: var(--e-global-color-white);
+    font-size: 10px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.secure_about-section .aboutus_content ul li p {
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-right: 0 !important;
+    text-align: left;
+    color: var(--e-global-color-primary);
+    transition: all 0.3s ease-in-out;
+}
+
+/* CCTV Secure Home Page Service Section Stylele */
+
+.secure_service-section{
+    background-color: var(--e-global-color-very-pale-blue);
+    position: relative;
+    padding: 125px 0 150px;
+}
+.secure_service-section .service_content{
+    position: relative;
+    text-align: center;
+}
+.secure_service-section .service_content h6{
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.secure_service-section .service_content h2{
+    color: var(--e-global-color-primary);
+    margin-bottom: 48px;
+}
+.secure_service-section .service_boxcontent{
+    width: 100%;
+    margin-bottom: 46px;
+    background: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.secure_service-section .service_boxcontent .upper_portion{
+    position: relative;
+}
+.secure_service-section .service_boxcontent .upper_portion .service-image{
+    overflow: hidden;
+    background-color: var(--e-global-color-black);
+}
+.secure_service-section .service_boxcontent .upper_portion .service-image .article_img{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.secure_service-section .service_boxcontent:hover .service-image .article_img{
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+.secure_service-section .service_boxcontent .upper_portion .image_content{
+    position: relative;
+}
+.secure_service-section .service_boxcontent .upper_portion .image_content .service-icon{
+    height: 102px;
+    width: 102px;
+    line-height: 102px;
+    bottom: -50px;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    box-shadow: 8px 2px 20px rgb(0 0 0 / 10%);
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.secure_service-section .service_boxcontent .lower_portion_wrapper {
+    text-align: center;
+    padding: 74px 48px 30px;
+}
+.secure_service-section .service_boxcontent .lower_portion_wrapper h4 {
+    margin-bottom: 4px;
+}
+.secure_service-section .service_boxcontent .lower_portion_wrapper p {
+    margin-bottom: 10px;
+    color: var(--e-global-color-text);
+}
+.secure_service-section .service_boxcontent .lower_portion_wrapper .read_more {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--e-global-color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+.secure_service-section .service_boxcontent .lower_portion_wrapper .read_more i{
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 5px;
+    color: var(--e-global-color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+.secure_service-section .service_boxcontent .lower_portion_wrapper .read_more:hover {
+    color: var(--e-global-color-accent);
+}
+.secure_service-section .service_boxcontent .lower_portion_wrapper .read_more:hover i{
+    color: var(--e-global-color-accent);
+}
+.secure_service-section .owl-carousel .owl-dots {
+    position: absolute;
+    display: block !important;
+    margin-top: 0px !important;
+    line-height: 0;
+    left: 0;
+    right: 0;
+}
+.secure_service-section .owl-carousel .owl-dots .owl-dot span {
+    background: var(--e-global-color-light-grayish-blue);
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+.secure_service-section .owl-carousel .owl-dots .owl-dot:hover span {
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.secure_service-section .owl-carousel .owl-dots .owl-dot.active span {
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    width: 17px;
+    height: 17px;
+}
+.secure_service-section .owl-carousel .owl-dots .owl-dot:focus {
+    outline: none;
+}
+.secure_service-section .owl-carousel .owl-item img {
+    display: inline-block;
+    width: auto;
+}
+
+/* CCTV Secure Home Page Provide Section Style */
+
+.secure_provide-section{
+    overflow: hidden;
+    position: relative;
+    background: var(--e-global-color-dark-blue);
+}
+.secure_provide-section .secure-providebackground{
+    position: absolute;
+}
+.secure_provide-section .secure-providesideimage{
+    position: absolute;
+    top: 175px;
+    left: -4px;
+}
+.secure_provide-section .provide-logo{
+    position: relative;
+    top: 60px;
+    right: -342px;
+    transition: all 0.3s ease-in-out;
+}
+.secure_provide-section .provide-logo .secure-providelogo{
+    position: absolute;
+    width: 191px;
+    height: 191px;
+    line-height: 196px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 100px;
+    z-index: 1;
+    background: var(--e-global-color-white);
+}
+.secure_provide-section .provide-logo .circle{
+    position: absolute;
+    width: 191px;
+    height: 191px;
+    line-height: 191px;
+    top: 12px;
+    right: 0;
+    text-align: center;
+    border-radius: 100px;
+    opacity: 15%;
+    background: var(--e-global-color-black);
+}
+.secure_provide-section .secure_provide_content{
+    padding: 134px 0 140px;
+}
+.secure_provide-section .secure_provide_content h6{
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-accent);
+}
+.secure_provide-section .secure_provide_content h2{
+    margin-bottom: 36px;
+    color: var(--e-global-color-white);
+}
+.secure_provide-section .secure_provide_content ul{
+    margin-bottom: 56px;
+}
+.secure_provide-section .secure_provide_content ul li{
+    padding-bottom: 36px;
+    margin-bottom: 32px;
+    display: flex;
+    border-bottom: 1px solid rgba(236, 236, 248, 0.15);
+}
+.secure_provide-section .secure_provide_content ul li figure{
+    position: relative;
+    top: 8px;
+    width: 14%;
+}
+.secure_provide-section .secure_provide_content ul li .content{
+    width: 86%;
+    padding-right: 45px;
+}
+.secure_provide-section .secure_provide_content ul li .content h4{
+    color: var(--e-global-color-white);
+}
+.secure_provide-section .secure_provide_content ul li .content p{
+    color: var(--e-global-color-text);
+}
+.secure_provide-section .secure_provide_content ul li:last-child{
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* CCTV Secure Home Page Pricing Plans Section Style */
+
+.secure_pricing-section {
+    padding: 135px 0 140px;
+    background-color: var(--e-global-color-white);
+}
+.secure_pricing-section .pricing_plan_content {
+    text-align: center;
+}
+.secure_pricing-section .pricing_plan_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.secure_pricing-section .pricing_plan_content h2 {
+    color: var(--e-global-color-primary);
+    margin-bottom: 48px;
+}
+.secure_pricing-section .pricing_plan_box {
+    padding: 50px 40px 50px;
+    text-align: center;
+    background: var(--e-global-color-white);
+    border: 1px solid var(--e-global-color-white);
+    box-shadow: 6px 20px 86px rgb(248 247 255 / 100%);
+    transition: all 0.3s ease-in-out;
+}
+.secure_pricing-section .pricing_plan_box:hover {
+    border: 1px solid var(--e-global-color-accent);
+    box-shadow: 6px 20px 86px rgb(86 225 236 / 10%);
+}
+.secure_pricing-section .pricing_plan_box .pricing-icon {
+    width: 122px;
+    height: 122px;
+    line-height: 122px;
+    margin-bottom: 26px;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.secure_pricing-section .pricing_plan_box .pricing-icon:hover {
+    transform: translateY(-5px);
+}
+.secure_pricing-section .pricing_plan_box h5 {
+    color: var(--e-global-color-primary);
+}
+.secure_pricing-section .pricing_plan_box span {
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 600;
+    color: var(--e-global-color-secondary);
+    display: block;
+    margin-bottom: 10px;
+}
+.secure_pricing-section .pricing_plan_box .month {
+    font-weight: 400;
+    margin-bottom: 28px;
+    padding-bottom: 26px;
+    position: relative;
+    color: var(--e-global-color-text);
+}
+.secure_pricing-section .pricing_plan_box .month::after {
+    content: "";
+    height: 1px;
+    width: 270px;
+    background-color: var(--e-global-color-light-gray-blue);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.secure_pricing-section .pricing_plan_box ul {
+    padding-left: 25px;
+}
+.secure_pricing-section .pricing_plan_box ul li {
+    position: relative;
+    margin-bottom: 14px;
+}
+.secure_pricing-section .pricing_plan_box ul li i {
+    border-radius: 100%;
+    background-color: var(--e-global-color-primary);
+    color: var(--e-global-color-white);
+    font-size: 10px;
+    line-height: 16px;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.secure_pricing-section .pricing_plan_box ul li p {
+    margin-bottom: 0;
+    padding-left: 32px;
+    text-align: left;
+    line-height: 20px;
+    color: var(--e-global-color-primary);
+    transition: all 0.3s ease-in-out;
+}
+.secure_pricing-section .pricing_plan_box ul li:last-child {
+    margin-bottom: 30px;
+}
+.secure_pricing-section .pricing_plan_box .btn_wrapper a {
+    padding: 18px 37px;
+}
+
+/* CCTV Secure Home Page Testimonial Section Style */
+
+.secure_testimonial_section {
+    padding: 158px 0 162px;
+    background-color: var(--e-global-color-very-pale-blue);
+}
+.secure_testimonial_section .testimonial_content{
+    padding-left: 60px;
+}
+.secure_testimonial_section .heading {
+    margin-bottom: 22px;
+}
+.secure_testimonial_section .heading h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.secure_testimonial_section .heading h2 {
+    color: var(--e-global-color-primary);
+    margin-right: 20px;
+}
+.secure_testimonial_section .testimonial-box p{
+    color: var(--e-global-color-text);
+    font-weight: 400;
+    margin-bottom: 28px;
+}
+.secure_testimonial_section .testimonial-box .info ul {
+    margin-bottom: 6px;
+}
+.secure_testimonial_section .testimonial-box .info ul li {
+    display: inline-block;
+}
+.secure_testimonial_section .testimonial-box .info ul li i {
+    color: var(--e-global-color-bright-yellow);
+    font-size: 12px;
+}
+.secure_testimonial_section .testimonial-box .info h6{
+    font-weight: 500;
+    letter-spacing: 0 !important;
+    color: var(--e-global-color-primary);
+}
+.secure_testimonial_section .testimonial_wrapper .testimonial_quote{
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    bottom: -103px;
+    right: 157px;
+    text-align: center;
+    background-image: linear-gradient(90deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-radius: 100px;
+}
+.secure_testimonial_section .testimonial_wrapper .image img{
+    border-radius: 200px;
+}
+.secure_testimonial_section .testimonial_wrapper .testimonial_image1{
+    top: -27px;
+    left: 10px;
+}
+.secure_testimonial_section .testimonial_wrapper .testimonial_image2{
+    top: 177px;
+    right: -12px;
+}
+.secure_testimonial_section .testimonial_wrapper .testimonial_circle1{
+    top: 115px;
+    right: 72px;
+}
+.secure_testimonial_section .testimonial_wrapper .testimonial_circle2{
+    bottom: -24px;
+    left: 120px;
+}
+.secure_testimonial_section .testimonial_wrapper .testimonial_circle3{
+    bottom: -73px;
+    right: 106px;
+}
+.secure_testimonial_section .owl-carousel .owl-dots {
+    display: block !important;
+    margin-top: -25px !important;
+    position: absolute;
+    left: 0;
+}
+.secure_testimonial_section .owl-carousel .owl-dots .owl-dot span {
+    background: var(--e-global-color-light-grayish-blue);
+    width: 19px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+.secure_testimonial_section .owl-carousel .owl-dots .owl-dot:hover span {
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.secure_testimonial_section .owl-carousel .owl-dots .owl-dot.active span {
+    width: 29px;
+    height: 4px;
+    border-radius: 2px;
+    position: relative;
+    background-image: linear-gradient(30deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.secure_testimonial_section .owl-carousel .owl-dots .owl-dot:focus {
+    outline: none;
+}
+
+/* CCTV Secure Home Page FAQ Section Style */
+
+.secure_faq-section{
+    position: relative;
+    padding: 132px 0 110px;
+}
+.secure_faq-section .faq_content{
+    position: relative;
+    text-align: center;
+}
+.secure_faq-section .faq_content h6{
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.secure_faq-section .faq_content h2{
+    margin-bottom: 48px;
+    color: var(--e-global-color-primary);
+}
+.secure_faq-section .faq h4{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+    display: inline-block;
+    color: var(--e-global-color-primary);
+}
+.secure_faq-section .accordion-card{
+    margin-bottom: 32px;
+    width: 100%;
+    background: var(--e-global-color-white);
+    box-shadow: 6px 20px 86px rgb(248 247 255 / 100%);
+}
+.secure_faq-section .accordian-inner p{
+    color: var(--e-global-color-text);
+}
+.secure_faq-section .accordian-inner .card-header {
+    padding: 20px 12px 20px 26px;
+    margin-bottom: 0;
+    background: none;
+    border: none;
+}
+.secure_faq-section .accordian-inner .card-body {
+    padding: 0 26px 20px;
+}
+.secure_faq-section .accordion-card a.btn.btn-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+.secure_faq-section .accordian-inner .accordion-card i{
+    position: absolute;
+    right: 20px;
+    margin: -6px 0;
+}
+.secure_faq-section .accordian-inner .accordion-card .btn {
+    padding: 0;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    color: var(--e-global-color-white);
+}
+.secure_faq-section .accordion-card a.btn.btn-link {
+    position: relative;
+}
+.secure_faq-section .accordion-card .btn-link:before {
+    content: "\f063";
+    position: absolute;
+    text-align: center;
+    right: 0px;
+    top: -10px;
+    width: 43px;
+    height: 43px;
+    line-height: 43px;
+    font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: middle;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    color: var(--e-global-color-white);
+    font-size: 18px;
+    border-radius: 100px;
+}
+.secure_faq-section .accordion-card .collapsed:before {
+    content: "\f061";
+    width: 43px;
+    height: 43px;
+    line-height: 43px;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    color: var(--e-global-color-white);
+    border-radius: 100px;
+    text-align: center;
+}
+
+/* CCTV Secure Home Page Footer Section Style */
+
+.secure_upper-section{
+    background: var(--e-global-color-very-dark-black-blue);
+    position: relative;
+    padding: 70px 0;
+}
+.secure_upper-section .upper_portion{
+    display: flex;
+    align-items: center;
+}
+.secure_upper-section .upper_portion p{
+    font-weight: 300;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    padding-left: 105px;
+    text-transform: uppercase;
+    color: var(--e-global-color-white);
+}
+.secure_upper-section .upper_portion form{
+    float: left;
+    width: 45.5%;
+}
+.secure_upper-section .upper_portion .form-group{
+    padding-left: 42px;
+}
+.secure_upper-section .upper_portion input {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 18px 26px;
+    width: 100%;
+    position: relative;
+    color: var(--e-global-color-text);
+    background-color: var(--e-global-color-white);
+    border: 2px solid transparent;
+    overflow: visible;
+    outline: none;
+}
+.secure_upper-section .upper_portion input:focus {
+    border: 2px solid var(--e-global-color-accent);
+}
+.secure_upper-section .upper_portion button {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    top: 0;
+    right: 0;
+    border: none;
+    float: right;
+    position: absolute;
+    color: var(--e-global-color-white);
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    overflow: visible;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+.secure_upper-section .upper_portion button:hover {
+    background-image: linear-gradient(32deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+.secure_footer-section{
+    background: var(--e-global-color-dark-blue);
+    position: relative;
+    overflow: hidden;
+}
+.secure_footer-section .footer-rightsideimage{
+    position: absolute;
+    top: 53px;
+    right: -10px;
+}
+.secure_footer-section .middle-portion{
+    padding: 80px 64px 68px 78px;
+}
+.secure_footer-section .middle-portion .logo-content h4{
+    margin-bottom: 14px;
+}
+.secure_footer-section .middle-portion h4{
+    margin-bottom: 10px;
+    color: var(--e-global-color-white);
+}
+.secure_footer-section .middle-portion p{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    padding-right: 40px;
+    color: var(--e-global-color-grayish-blue);
+}
+.secure_footer-section .middle-portion .social-icons li{
+    margin: 0 4px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+.secure_footer-section .middle-portion .social-icons a{
+    margin-left: 0 !important;
+}
+.secure_footer-section .middle-portion .social-icons i{
+    font-size: 16px;
+    height: 46px;
+    width: 46px;
+    line-height: 44px;
+    border-radius: 100px;
+    text-align: center;
+    color: var(--e-global-color-white);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.secure_footer-section .middle-portion .social-icons i:hover {
+    transform: translateY(-5px);
+    color: var(--e-global-color-white);
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    border: 1px solid var(--e-global-color-secondary);
+}
+.secure_footer-section .middle-portion .social-icons li:first-child{
+    margin-left: 0;
+}
+.secure_footer-section .middle-portion .social-icons li:last-child{
+    margin-right: 0;
+}
+.secure_footer-section .middle-portion .links{
+    padding-left: 6px;
+}
+.secure_footer-section .middle-portion .use-link{
+    padding-left: 27px;
+}
+.secure_footer-section .middle-portion li{
+    margin-bottom: 6px;
+}
+.secure_footer-section .middle-portion li a{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    margin-left: 13px;
+    text-decoration: none;
+    color: var(--e-global-color-grayish-blue);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.secure_footer-section .middle-portion li p{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 0;
+    color: var(--e-global-color-grayish-blue);
+    transition: all 0.3s ease-in-out;
+}
+.secure_footer-section .middle-portion li i{
+    font-size: 10px;
+    line-height: 10px;
+    color: var(--e-global-color-white);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.secure_footer-section .middle-portion li:hover p{
+    color: var(--e-global-color-accent);
+}
+.secure_footer-section .middle-portion li:hover a{
+    color: var(--e-global-color-accent);
+}
+.secure_footer-section .middle-portion li:hover i{
+    color: var(--e-global-color-accent);
+}
+.secure_footer-section .middle-portion .icon .text{
+    position: relative;
+    margin-bottom: 11px;
+    padding-left: 30px;
+}
+.secure_footer-section .middle-portion .icon i{
+    position: absolute;
+    font-size: 16px;
+    line-height: 16px;
+    left: 0;
+    top: 4px;
+}
+.secure_footer-section .middle-portion .icon .location{
+    top: 12px;
+}
+.secure_footer-section .middle-portion .icon a{
+    margin-left: 0 !important;
+}
+.secure_footer-section .copyright {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+.secure_footer-section .copyright p {
+    color: var(--e-global-color-grayish-blue);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0;
+}
+.secure_footer-section .copyright span {
+    color: var(--e-global-color-accent);
+}
+
+/* About Page */
+
+.sub-banner{
+    background: url(../images/about-bannerbackground1.png);
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sub-banner::before {
+    background: url(../images/bannerbackgroundbottom.png);
+    content: "";
+    width: 949px;
+    height: 71px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.sub-banner::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-bottom: solid 28px rgb(250,250,255);
+    border-right: solid 1162px rgb(250,250,255);
+    border-left: solid 949px transparent;
+    border-top: solid 41px transparent;
+} 
+.sub-banner .card-overlay{
+    background: rgba(0, 0, 0, 65%);
+}
+.about_sub_banner::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-bottom: solid 28px rgb(255,255,255);
+    border-right: solid 1162px rgb(255,255,255);
+    border-left: solid 949px transparent;
+    border-top: solid 41px transparent;
+} 
+.about_banner-section {
+    padding: 110px 0 205px;
+}
+.about_banner-section .about_banner_content{
+    text-align: center;
+}
+.about_banner-section .about_banner_content h1 {
+    margin-bottom: 20px;
+}
+.about_banner-section .about_banner_content p {
+    margin-bottom: 32px;
+    padding: 0 260px;
+}
+.about_banner-section .about_banner_content .box {
+    padding: 12px 30px;
+    text-align: center;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid rgba(250, 250, 255, 16%);
+    transition: all 0.3s ease-in-out;
+}
+.about_banner-section .about_banner_content .box a span:hover{
+    color: var(--e-global-color-accent);
+}
+.about_banner-section .about_banner_content .box span {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    display: inline-block;
+    color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.about_banner-section .about_banner_content .box .arrow {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* About */
+
+.aboutpage_about-section {
+    padding: 134px 0 180px;
+}
+.aboutpage_about-section .aboutus_right_shape {
+    top: 205px;
+    right: 0;
+}
+.aboutpage_about-section .aboutus_right_shape img {
+    opacity: 0.1;
+}
+.aboutpage_about-section .aboutus_images_wrapper{
+    position: relative;
+}
+.aboutpage_about-section .aboutus_images_wrapper .about-image1 {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+}
+.aboutpage_about-section .aboutus_images_wrapper .about-image2 {
+    position: absolute;
+    top: 30px;
+    right: -45px;
+}
+.aboutpage_about-section .aboutus_images_wrapper .image{
+    background: var(--e-global-color-black);
+}
+.aboutpage_about-section .aboutus_images_wrapper .image img{
+    opacity: 95%;
+}
+.aboutpage_about-section .aboutus_content_wrapper {
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+    top: 28px;
+    bottom: 0;
+    left: 46px;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    border-radius: 100%;
+    border: 4px solid var(--e-global-color-white);
+    background-image: linear-gradient(46deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.aboutpage_about-section .aboutus_content_wrapper .aboutus_span_wrapper span {
+    font-size: 50px;
+    line-height: 52px;
+    font-weight: 600;
+    left: 6px;
+    position: relative;
+    color: var(--e-global-color-white);
+}
+.aboutpage_about-section .aboutus_content_wrapper .aboutus_span_wrapper sup {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--e-global-color-white);
+}
+.aboutpage_about-section .aboutus_content_wrapper p {
+    line-height: 16px;
+    font-weight: 500;
+    color: var(--e-global-color-white);
+}
+.aboutpage_about-section .aboutus_content {
+    padding-left: 66px;
+    padding-top: 84px;
+}
+.aboutpage_about-section .aboutus_content h6 {
+    color: var(--e-global-color-secondary);
+    letter-spacing: 1.6px;
+}
+.aboutpage_about-section .aboutus_content h2 {
+    margin-bottom: 20px;
+    color: var(--e-global-color-primary);
+}
+.aboutpage_about-section .aboutus_content p {
+    margin-bottom: 18px;
+    color: var(--e-global-color-text);
+}
+.aboutpage_about-section .aboutus_content ul {
+    margin-bottom: 35px;
+}
+.aboutpage_about-section .aboutus_content ul li {
+    position: relative;
+    margin-bottom: 13px;
+}
+.aboutpage_about-section .aboutus_content ul li i {
+    border-radius: 100%;
+    background-color: var(--e-global-color-primary);
+    color: var(--e-global-color-white);
+    font-size: 10px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.aboutpage_about-section .aboutus_content ul li p {
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-right: 0 !important;
+    text-align: left;
+    color: var(--e-global-color-primary);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Satistics */
+
+.about_statistic-section {
+    padding: 135px 0;
+    background-color: var(--e-global-color-very-pale-blue);
+}
+.about_statistic-section .about_statistic_content {
+    text-align: center;
+}
+.about_statistic-section .about_statistic_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.about_statistic-section .about_statistic_content h2 {
+    margin-bottom: 48px;
+    color: var(--e-global-color-primary);
+}
+.about_statistic-section .box{
+    padding: 38px 50px 34px;
+    position: relative;
+    text-align: center;
+    background: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.about_statistic-section .box:hover {
+    transform: translateY(-5px);
+}
+.about_statistic-section .box .statistic-icon{
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    margin-bottom: 18px;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.about_statistic-section .box:hover .statistic-icon{
+    background-image: linear-gradient(32deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+.about_statistic-section .box .value{
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 600;
+    display: block;
+    color: var(--e-global-color-primary);
+}
+.about_statistic-section .box .heading{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: var(--e-global-color-text);
+}
+
+/* Cyber */
+
+.about_cyber-section{
+    overflow: hidden;
+    position: relative;
+    background: var(--e-global-color-dark-blue);
+}
+.about_cyber-section .secure-providebackground{
+    position: absolute;
+}
+.about_cyber-section .secure-providesideimage{
+    position: absolute;
+    top: 175px;
+    left: -4px;
+}
+.about_cyber-section .provide-logo{
+    position: relative;
+    top: 60px;
+    right: -348px;
+}
+.about_cyber-section .provide-logo .secure-providelogo{
+    position: absolute;
+    width: 191px;
+    height: 191px;
+    line-height: 196px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 100px;
+    z-index: 1;
+    background: var(--e-global-color-white);
+}
+.about_cyber-section .provide-logo .circle{
+    position: absolute;
+    width: 191px;
+    height: 191px;
+    line-height: 191px;
+    top: 12px;
+    right: 0;
+    text-align: center;
+    border-radius: 100px;
+    opacity: 15%;
+    background: var(--e-global-color-black);
+}
+.about_cyber-section .about_cyber_content{
+    padding: 136px 0 139px;
+    position: relative;
+}
+.about_cyber-section .about_cyber_content h6{
+    color: var(--e-global-color-accent);
+    letter-spacing: 1.6px;
+}
+.about_cyber-section .about_cyber_content h2{
+    color: var(--e-global-color-white);
+    margin-bottom: 22px;
+}
+.about_cyber-section .about_cyber_content p{
+    padding-right: 54px;
+}
+.about_cyber-section .about_cyber_content .text1{
+    margin-bottom: 22px;
+    color: var(--e-global-color-grayish-blue);
+}
+.about_cyber-section .about_cyber_content .text2{
+    margin-bottom: 46px;
+    color: var(--e-global-color-grayish-blue);
+}
+.about_cyber-section .about_cyber_content .progress-outer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -84px;
+}
+.about_cyber-section .about_cyber_content .progress-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 166px);
+    grid-gap: 0;
+    margin: 0;
+}
+.about_cyber-section .about_cyber_content .progress-inner .box {
+    width: 100%;
+}
+.about_cyber-section .about_cyber_content .progress-inner .box .chart {
+    position: relative;
+    width: 256px;
+    height: 142px;
+    line-height: 118px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--e-global-color-white);
+    margin-bottom: 0;
+}
+.about_cyber-section .about_cyber_content .progress-inner .box canvas {
+    position: absolute;
+    top: -4px;
+    left: 63px;
+    width: 50%;
+}
+.about_cyber-section .about_cyber_content .progress-inner .box h6 {
+    font-weight: 600;
+    letter-spacing: 0 !important;
+    margin-bottom: 0;
+    color: var(--e-global-color-white);
+    position: relative;
+    right: -62px;
+}
+.about_cyber-section .about_cyber_content .progress-inner .box .heading2 {
+    right: -80px;
+}
+
+/* Team */
+
+.about_team-section {
+    padding: 134px 0 138px;
+    background-color: var(--e-global-color-very-pale-blue);
+}
+.about_team-section .about_team_content {
+    text-align: center;
+}
+.about_team-section .about_team_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.about_team-section .about_team_content h2 {
+    margin-bottom: 48px;
+    color: var(--e-global-color-primary);
+}
+.about_team-section .team-box {
+    position: relative;
+    text-align: center;
+    background-color: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.about_team-section .team-box .content{
+    padding: 25px 0 32px;
+}
+.about_team-section .team-box span {
+    margin-bottom: 14px;
+    display: block;
+    color: var(--e-global-color-text);
+}
+.about_team-section .team-box li {
+    margin: 0 3px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+.about_team-section .team-box li:first-child {
+    margin-left: 0;
+}
+.about_team-section .team-box li:last-child {
+    margin-right: 0;
+}
+.about_team-section .team-box li a {
+    color: var(--e-global-color-white);
+}
+.about_team-section .team-box i {
+    font-size: 14px;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 100px;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.about_team-section .team-box:hover i{    
+    background-image: linear-gradient(32deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+.about_team-section .team-box i:hover{    
+    transform: translateY(-5px);
+}
+.about_team-section .team-box .image{
+    overflow: hidden;
+    background-color: var(--e-global-color-black);
+}
+.about_team-section .team-box .image img{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.about_team-section .team-box:hover .image img{
+    transform: scale(1.1);
+    opacity: 70%;
+}
+
+/* Service Page */
+
+.servicepage_service-section{
+    background-color: var(--e-global-color-very-pale-blue);
+    position: relative;
+    padding: 125px 0 110px;
+}
+.servicepage_service-section .service_content{
+    position: relative;
+    text-align: center;
+}
+.servicepage_service-section .service_content h6{
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.servicepage_service-section .service_content h2{
+    color: var(--e-global-color-primary);
+    margin-bottom: 48px;
+}
+.servicepage_service-section .service_boxcontent{
+    width: 100%;
+    margin-bottom: 32px;
+    background: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.servicepage_service-section .service_boxcontent .upper_portion{
+    position: relative;
+}
+.servicepage_service-section .service_boxcontent .upper_portion .service-image{
+    overflow: hidden;
+    background-color: var(--e-global-color-black);
+}
+.servicepage_service-section .service_boxcontent .upper_portion .service-image .article_img{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.servicepage_service-section .service_boxcontent:hover .service-image .article_img{
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+.servicepage_service-section .service_boxcontent .upper_portion .image_content{
+    position: relative;
+}
+.servicepage_service-section .service_boxcontent .upper_portion .image_content .service-icon{
+    height: 102px;
+    width: 102px;
+    line-height: 102px;
+    bottom: -50px;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    box-shadow: 8px 2px 20px rgb(0 0 0 / 10%);
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.servicepage_service-section .service_boxcontent .lower_portion_wrapper {
+    text-align: center;
+    padding: 72px 48px 34px;
+}
+.servicepage_service-section .service_boxcontent .lower_portion_wrapper h4 {
+    margin-bottom: 4px;
+}
+.servicepage_service-section .service_boxcontent .lower_portion_wrapper p {
+    margin-bottom: 10px;
+    color: var(--e-global-color-text);
+}
+.servicepage_service-section .service_boxcontent .lower_portion_wrapper .read_more {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--e-global-color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+.servicepage_service-section .service_boxcontent .lower_portion_wrapper .read_more i{
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 5px;
+    color: var(--e-global-color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+.servicepage_service-section .service_boxcontent .lower_portion_wrapper .read_more:hover {
+    color: var(--e-global-color-accent);
+}
+.servicepage_service-section .service_boxcontent .lower_portion_wrapper .read_more:hover i{
+    color: var(--e-global-color-accent);
+}
+
+/* Project page */
+
+/* Portfolio */
+
+.project_portfolio-section {
+    padding: 130px 0 142px;
+    background-color: var(--e-global-color-very-pale-blue);
+}
+.project_portfolio-section .case_studies_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.project_portfolio-section .case_studies_content h2 {
+    color: var(--e-global-color-primary);
+    margin-bottom: 48px;
+} 
+.project_portfolio-section .case_studies_box {
+    margin-bottom: 32px;
+    position: relative;
+    background-image: linear-gradient(90deg, var(--e-global-color-black) 0%, var(--e-global-color-black) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.project_portfolio-section .case_studies_box img {
+    opacity: 0.75;
+    transition: all 0.3s ease-in-out;
+}
+.project_portfolio-section .case_studies_box img:hover {
+    opacity: 50%;
+}
+.project_portfolio-section .case_studies_box:hover figure {
+    background-image: linear-gradient(to top, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content span {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    color: var(--e-global-color-white);
+    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    padding: 5px 16px;
+    margin-bottom: 22px;
+    transition: all 0.3s ease-in-out;
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content h5 {
+    margin-bottom: 12px;
+    padding-right: 36px;
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content a{
+    display: inline-block;
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content figure {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content figure img {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    width: auto;
+    margin: 0 auto;
+}
+.project_portfolio-section .case_studies_box:hover .case_studies_box_content span {
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-primary);
+}
+.project_portfolio-section .case_studies_box:hover .case_studies_box_content figure {
+    background-color: var(--e-global-color-white);
+    background-image: none;
+}
+.project_portfolio-section .case_studies_box:hover .case_studies_box_content figure img {
+    filter: none;
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content figure:hover {
+    border: 1px solid var(--e-global-color-pale-blue);
+    background-color: var(--e-global-color-pale-blue);
+}
+.project_portfolio-section .case_studies_box .case_studies_box_content figure:hover img {
+    filter: brightness(0);
+    opacity: 1;
+}
+.project_portfolio-section .btn_wrapper{
+    text-align: center;
+    padding-top: 18px;
+}
+
+/* Project PopUp Style */
+
+.project_modal .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    outline: 0;
+}
+.project_modal .fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.project_modal .fade.show {
+    opacity: 1;
+    background-color: transparent;
+}
+[tabindex="-1"]:focus {
+    outline: 0!important;
+}
+.project_modal .modal.fade .modal-dialog {
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+    transform: translate(0,-25%);
+}
+.project_modal .modal-dialog {
+    max-width: 48%;
+    margin: 1.75rem auto;
+    position: relative;
+    width: auto;
+    pointer-events: none;
+}
+.project_modal .modal.show .modal-dialog {
+    transform: translate(0,0);
+}
+.project_modal .modal.fade .modal-dialog {
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+}
+.project_modal .modal-content {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    /* height: 100vh; */
+    pointer-events: auto;
+    background-clip: padding-box;
+    outline: 0;
+    background-color: var(--e-global-color-white);
+    box-shadow: 1px 21px 46px rgb(0 0 100 / 25%);
+    border-radius: 0;
+    border: none;
+}
+.project_modal .modal-header {
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: none;
+}
+.project_modal .btn-close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    opacity: 1 !important;
+}
+.project_modal .modal-header .btn-close {
+    padding: 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+.project_modal .modal-header button {
+    background: var(--e-global-color-accent);
+    opacity: 1;
+    position: absolute;
+    right: 7px;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    outline: none;
+}
+.project_modal .btn-close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+}
+.project_modal button.btn-close {
+    border: 0;
+    -webkit-appearance: none;
+}
+.project_modal button {
+    text-transform: none;
+    overflow: visible;
+}
+.project_modal .modal-header button i {
+    color: var(--e-global-color-white);
+    font-size: 18px;
+    line-height: 18px;
+    padding: 5px 5px;
+    outline: none;
+}
+.project_modal .fa-x:before {
+    content: "\58";
+}
+.project_modal .blog-model-con .modal-body {
+    overflow-y: auto;
+    padding-top: 0;
+}
+.project_modal .modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.project_modal .modal-body .blog-box-item {
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+}
+.project_modal .blog-box-item {
+    background: var(--white-color);
+    overflow: hidden;
+}
+.project_modal .modal-body .blog-img{
+    float: left;
+    width: 100%;
+}
+.project_modal .modal-body .blog-img figure {
+    position: relative;
+    /* text-align: center; */
+}
+/* .project_modal .modal-body img {
+    width: 50%;
+    height: 575px;
+} */
+.project_modal .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.project_modal .modal-content .project_content{
+    padding: 40px 0 40px 30px;
+}
+.project_modal .modal-content .project_content h3{
+    margin-bottom: 12px;
+    color: var(--e-global-color-primary);
+}
+.project_modal .modal-content .project_content .text{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 20px;
+    color: var(--e-global-color-text);
+}
+.project_modal .modal-content .project_content .properties{
+    margin-bottom: 20px;
+}
+.project_modal .modal-content .project_content .properties ul{
+    padding-left: 25px;
+}
+.project_modal .modal-content .project_content .properties li {
+    margin-bottom: 8px;
+    position: relative;
+    color: var(--e-global-color-text);
+}
+.project_modal .modal-content .project_content .properties li:last-child {
+    margin-bottom: 0;
+}
+.project_modal .modal-content .project_content .properties ul li .circle {
+    border-radius: 100%;
+    background-color: var(--e-global-color-secondary);
+    color: var(--e-global-color-white);
+    font-size: 10px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: 4px;
+    left: -25px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Contact page */
+
+/* Contact info */
+
+.contact_info-section {
+    padding: 125px 0 140px;
+    background-color: var(--e-global-color-very-pale-blue);
+}
+.contact_info-section .contact_info_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.contact_info-section .contact_info_content h2 {
+    margin-bottom: 50px;
+    color: var(--e-global-color-primary);
+}
+.contact_info-section .contact-box{
+    padding: 30px 28px 26px;
+    height: 179px;
+    width: 100%;
+    display: inline-block;
+    background: var(--e-global-color-white);
+    transition: all 0.3s ease-in-out;
+}
+.contact_info-section .contact-box .box-image{
+    float: left;
+    width: 26%;
+}
+.contact_info-section .contact-box figure{
+    height: 90px;
+    width: 90px;
+    line-height: 90px;
+    top: -3px;
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 100px;
+    text-align: center;
+    background-image: linear-gradient(32deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.contact_info-section .contact-box figure:hover{
+    transform: translateY(-5px);
+}
+.contact_info-section .contact-box .box-content{
+    position: relative;
+    padding-left: 36px;
+    padding-top: 5px;
+    display: inline-block;
+    width: 74%;
+}
+.contact_info-section .contact-box h4{
+    margin-bottom: 12px;
+}
+.contact_info-section .contact-box .heading{
+    margin-bottom: 11px;
+}
+.contact_info-section .contact-box p{
+    margin-top: -10px;
+    margin-bottom: 4px;
+    color: var(--e-global-color-text);
+}
+.contact_info-section .contact-box .box-content a {
+    color: var(--e-global-color-text);
+    transition: all 0.3s ease-in-out;
+}
+.contact_info-section .contact-box .box-content a:hover {
+    color: var(--e-global-color-secondary);
+}
+
+/* Contact map */
+
+.contact_map_section {
+    overflow: hidden;
+}
+.contact_map_section iframe {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    width: 100%;
+    height: 645px;
+}
+.contact_map_section iframe:hover {
+    filter: none;
+}
+
+/* Contact info */
+
+.contact_form-section {
+    padding: 135px 0 152px;
+    background-color: var(--e-global-color-white);
+}
+.contact_form-section .get_in_touch_content {
+    text-align: center;
+}
+.contact_form-section .get_in_touch_content h6 {
+    letter-spacing: 1.6px;
+    color: var(--e-global-color-secondary);
+}
+.contact_form-section .get_in_touch_content h2 {
+    margin-bottom: 50px;
+    color: var(--e-global-color-primary);
+}
+.contact_form-section .get_in_touch_form_content span {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    margin-top: 0;
+    top: -10px;
+    left: 5px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    color: var(--e-global-color-pure-red);
+}
+.contact_form-section .get_in_touch_form_content input {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-text);
+    box-shadow: 0 6px 86px 20px rgb(248 247 255 / 74%);
+    padding: 15px 26px;
+    height: 58px;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 18px;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.contact_form-section .get_in_touch_form_content textarea {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-text);
+    box-shadow: 0 6px 86px 20px rgb(248 247 255 / 74%);
+    padding: 15px 26px;
+    resize: none;
+    height: 132px;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 50px;
+    outline: none;
+    border: 1px solid transparent;
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+}
+.contact_form-section .get_in_touch_form_content input:focus{
+    box-shadow: none;
+    border: 1px solid var(--e-global-color-accent);
+}
+.contact_form-section .get_in_touch_form_content textarea:focus{
+    box-shadow: none;
+    border: 1px solid var(--e-global-color-accent);
+}
+.contact_form-section .get_in_touch_form_content .form-control::placeholder { 
+    color: var(--e-global-color-text);
+}
+.contact_form-section .get_in_touch_form_content .form_button_wrapper button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 20px 40px;
+    color: var(--e-global-color-white);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    position: relative;
+}
+
+/* Single Service Page */
+
+.single_service{
+    background-color: var(--e-global-color-very-pale-blue);
+    position: relative;
+    padding: 125px 0 110px;
+}
+.single_service .main-box{
+    position: relative;
+}
+.single_service .main-box .image{
+    margin-bottom: 30px;
+}
+.single_service .main-box .image img{
+	width: 100%;
+}
+.single_service .main-box .content1 .admin_icon{
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.single_service .main-box .content1 i{
+    font-size: 14px;
+    color: var(--e-global-color-secondary);
+    margin-right: 4px;
+}
+.single_service .main-box .content1 .calendar{
+    font-size: 16px;
+}
+.single_service .main-box .content1 span{
+    display: inline-block;    
+	color: var(--e-global-color-primary);
+}
+.single_service .main-box .content1 .text-mr{
+    margin-right: 10px;
+}
+.single_service .main-box .text1{
+    margin-bottom: 10px;
+}
+.single_service .main-box .text2{
+    margin-bottom: 20px;
+}
+.single_service .main-box .list {
+    margin-bottom: 20px;
+}
+.single_service .main-box .list li {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    padding-left: 28px;
+    position: relative;
+    color: var(--e-global-color-primary);
+}
+.single_service .main-box .list li i {
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    top: 4px;
+    left: 1px;
+    font-size: 11px;
+    border-radius: 100px;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--e-global-color-secondary);
+    color: var(--e-global-color-white);
+}
+.single_service .icon{
+    position: relative;
+}
+.single_service .icon h3{
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 15px;
+}
+.single_service .icon ul li {
+    padding: 0 !important;
+    margin: 0 5px;
+    display: inline-block;
+}
+.single_service .icon ul li:first-child {
+    margin-left: 0;
+}
+.single_service .icon ul li:last-child {
+    margin-right: 0;
+}
+.single_service .icon ul li i {
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 100px;
+    left: 0 !important;
+    top: 0 !important;
+    text-align: center;
+    color: var(--e-global-color-white);
+    background: var(--e-global-color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+.single_service .icon ul li i:hover {
+    transform: translateY(-5px);
+}
+.single_service .box{
+    padding: 30px 30px 35px;
+    margin-bottom: 30px;
+    background: var(--e-global-color-white);
+    box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+}
+.single_service .box h4{
+	position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--e-global-color-very-light-gray);
+}
+.single_service .box input{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-text);
+    box-shadow: 0 40px 35px 60px rgb(248 247 255 / 74%) inset;
+    padding: 15px;
+    height: 55px;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 18px;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.single_service .box input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--e-global-color-secondary);
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-text);
+}
+.single_service .box .subscribe_now {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    color: var(--e-global-color-white);
+    background-image: linear-gradient(90deg, var(--e-global-color-secondary) 0%, var(--e-global-color-accent) 100%);
+    transition: all 0.3s ease-in-out;
+}
+.single_service .box .subscribe_now:hover {
+    background-image: linear-gradient(90deg, var(--e-global-color-accent) 0%, var(--e-global-color-secondary) 100%);
+}
+.single_service .feed{
+    position: relative;
+	display: flex;
+    align-items: center;
+	margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--e-global-color-very-light-gray);
+}
+.single_service .feed:last-child{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+.single_service .feed .feed-image{
+    width: 34%;
+}
+.single_service .feed a{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--e-global-color-primary);
+    text-decoration: none;
+    width: 66%;
+    padding-left: 16px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+.single_service .feed a:hover{
+    color: var(--e-global-color-secondary);
+}
+.single_service ul li{
+    padding-left: 10px;
+}
+.single_service ul li i {
+    font-size: 6px;
+    top: -3px;
+    left: -8px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    color: var(--e-global-color-secondary);
+}
+.single_service ul li a{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 16px;
+    display: inline-block;
+    color: var(--e-global-color-primary);
+    transition: all 0.3s ease-in-out;
+}
+.single_service ul li a:hover{
+    color: var(--e-global-color-secondary);
+}
+
+/* Back to top button */
+
+#button {
+    display: inline-block;
+    background-color: var(--e-global-color-accent);
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 60px;
+    right: 80px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    -webkit-animation: spineer 2s infinite;
+    animation: spineer 2s infinite;  
+    text-decoration: none; 
+    cursor: pointer;
+}
+#button::after {
+    content: "\f062";
+    font-family: "Font Awesome 5 free";
+    font-size: 22px;
+    line-height: 22px;
+    color: #FFF;
+    font-weight: 600;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+@-webkit-keyframes spineer {
+from {
+    box-shadow: 0 0 0 0 rgba(87, 238, 241)
+}
+to {
+    box-shadow: 0 0 0 45px rgba(250, 87, 51, .01)
+}
+}
+
+@keyframes spineer {
+from {
+    box-shadow: 0 0 0 0 rgba(87, 238, 241)
+}
+to {
+    box-shadow: 0 0 0 45px rgba(250, 87, 51, .01)
+}
+}
+
+/* PRELOADER */ 
+
+.js {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+  
+.preloader-jackhammer ul li {
+    list-style: none;
+}
+.cssload-flex-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: row;
+    -o-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cssload-flex-container li {
+    padding: 10px;
+    height: 97px;
+    width: 97px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.cssload-loading {
+    display: inline-block;
+    position: relative;
+    width: 5px;
+    height: 49px;      
+    background: var(--e-global-color-accent);
+    margin-top: 5px;
+    border-radius: 975px;
+    -o-border-radius: 975px;
+    -ms-border-radius: 975px;
+    -webkit-border-radius: 975px;
+    -moz-border-radius: 975px;
+    animation: cssload-upDown2 1.15s ease infinite;
+    -o-animation: cssload-upDown2 1.15s ease infinite;
+    -ms-animation: cssload-upDown2 1.15s ease infinite;
+    -webkit-animation: cssload-upDown2 1.15s ease infinite;
+    -moz-animation: cssload-upDown2 1.15s ease infinite;
+    animation-direction: alternate;
+    -o-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-delay: 0.29s;
+    -o-animation-delay: 0.29s;
+    -ms-animation-delay: 0.29s;
+    -webkit-animation-delay: 0.29s;
+    -moz-animation-delay: 0.29s;
+}
+.cssload-loading:after, .cssload-loading:before {
+    display: inline-block;
+    position: relative;
+    width: 5px;
+    height: 49px;
+    background: var(--e-global-color-secondary);
+    margin-top: 5px;
+    border-radius: 975px;
+    -o-border-radius: 975px;
+    -ms-border-radius: 975px;
+    -webkit-border-radius: 975px;
+    -moz-border-radius: 975px;
+    animation: cssload-upDown2 1.15s ease infinite;
+    -o-animation: cssload-upDown2 1.15s ease infinite;
+    -ms-animation: cssload-upDown2 1.15s ease infinite;
+    -webkit-animation: cssload-upDown2 1.15s ease infinite;
+    -moz-animation: cssload-upDown2 1.15s ease infinite;
+    animation-direction: alternate;
+    -o-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-delay: 0.29s;
+    -o-animation-delay: 0.29s;
+    -ms-animation-delay: 0.29s;
+    -webkit-animation-delay: 0.29s;
+    -moz-animation-delay: 0.29s;
+}
+.cssload-loading:after {
+    position: absolute;
+    content: '';
+    animation: cssload-upDown 1.15s ease infinite;
+    -o-animation: cssload-upDown 1.15s ease infinite;
+    -ms-animation: cssload-upDown 1.15s ease infinite;
+    -webkit-animation: cssload-upDown 1.15s ease infinite;
+    -moz-animation: cssload-upDown 1.15s ease infinite;
+    animation-direction: alternate;
+    -o-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+}
+.cssload-loading:before {
+    position: absolute;
+    content: '';
+    animation: cssload-upDown 1.15s ease infinite;
+    -o-animation: cssload-upDown 1.15s ease infinite;
+    -ms-animation: cssload-upDown 1.15s ease infinite;
+    -webkit-animation: cssload-upDown 1.15s ease infinite;
+    -moz-animation: cssload-upDown 1.15s ease infinite;
+    animation-direction: alternate;
+    -o-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    left: -10px;
+}
+.cssload-loading:after {
+    left: 10px;
+    animation-delay: 0.58s;
+    -o-animation-delay: 0.58s;
+    -ms-animation-delay: 0.58s;
+    -webkit-animation-delay: 0.58s;
+    -moz-animation-delay: 0.58s;
+}
+
+@keyframes cssload-upDown {
+from {
+    transform: translateY(19px);
+}
+
+to {
+    transform: translateY(-19px);
+}
+}
+
+
+@-o-keyframes cssload-upDown {
+from {
+    -o-transform: translateY(19px);
+}
+
+to {
+    -o-transform: translateY(-19px);
+}
+}
+
+
+@-ms-keyframes cssload-upDown {
+from {
+    -ms-transform: translateY(19px);
+}
+
+to {
+    -ms-transform: translateY(-19px);
+}
+}
+
+
+@-webkit-keyframes cssload-upDown {
+from {
+    -webkit-transform: translateY(19px);
+}
+
+to {
+    -webkit-transform: translateY(-19px);
+}
+}
+
+
+@-moz-keyframes cssload-upDown {
+from {
+    -moz-transform: translateY(19px);
+}
+
+to {
+    -moz-transform: translateY(-19px);
+}
+}
+
+
+@keyframes cssload-upDown2 {
+from {
+    transform: translateY(29px);
+}
+
+to {
+    transform: translateY(-19px);
+}
+}
+
+
+@-o-keyframes cssload-upDown2 {
+from {
+    -o-transform: translateY(29px);
+}
+
+to {
+    -o-transform: translateY(-19px);
+}
+}
+
+
+@-ms-keyframes cssload-upDown2 {
+from {
+    -ms-transform: translateY(29px);
+}
+
+to {
+    -ms-transform: translateY(-19px);
+}
+}
+
+
+@-webkit-keyframes cssload-upDown2 {
+from {
+    -webkit-transform: translateY(29px);
+}
+
+to {
+    -webkit-transform: translateY(-19px);
+}
+}
+
+
+@-moz-keyframes cssload-upDown2 {
+from {
+    -moz-transform: translateY(29px);
+}
+
+to {
+    -moz-transform: translateY(-19px);
+}
+}
