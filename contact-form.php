@@ -39,7 +39,7 @@ if(isset($fname) && isset($email))
 }
 else{
 	$status='error';
-	$output="please fill require fields";
+	$output="please fill required fields";
 	
 	}
 echo json_encode(array('status'=> $status, 'msg'=>$output));
