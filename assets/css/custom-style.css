@@ -3144,3 +3144,21 @@ input[type="number"]::-webkit-calendar-picker-indicator {
 @media screen and (max-width: 375px) {
     .singleblog-section .box5 .feed {width: 280px;}
 }
+
+/* Contact page banner: licensed server-room photo instead of the template's grey placeholder */
+.contact-banner {
+    background-image: url(../images/contact-banner.jpg);
+}
+
+/* Contact page: phone button under the two offers */
+.contact_paths_section .contact_call {
+    margin-top: 48px;
+}
+
+/* About badge: the three-line "Years of Combined Experience" label needs smaller text once the circle shrinks below 150px */
+@media screen and (max-width: 1199px) {
+    .aboutus_section .aboutus_content_wrapper p {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}
