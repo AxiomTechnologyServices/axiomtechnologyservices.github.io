@@ -3145,36 +3145,12 @@ input[type="number"]::-webkit-calendar-picker-indicator {
     .singleblog-section .box5 .feed {width: 280px;}
 }
 
-/* Contact page: keep CTA buttons visible on the hovered gradient box */
-.contact_paths_section .services_box:hover .default-btn {
-    background-image: none;
-    background-color: var(--e-global-color-white);
-    color: var(--e-global-color-primary);
-}
-
 /* Contact page banner: licensed server-room photo instead of the template's grey placeholder */
 .contact-banner {
     background-image: url(../images/contact-banner.jpg);
 }
 
-/* Contact page message form: style the select like the template's inputs */
-.contact_form-section .get_in_touch_form_content select {
-    font-weight: 300;
-    font-size: 14px;
-    background-color: var(--e-global-color-white);
-    color: var(--e-global-color-text);
-    box-shadow: 0 6px 86px 20px rgb(248 247 255 / 74%);
-    padding: 0 26px;
-    height: 58px;
-    border-radius: 0;
-    margin-bottom: 18px;
-    border: 1px solid transparent;
-}
-.contact_form-section .get_in_touch_form_content select:focus {
-    box-shadow: none;
-    border: 1px solid var(--e-global-color-accent);
-}
-.contact_form-section #form_result {
-    margin: -30px 0 30px;
-    text-align: center;
+/* Contact page: phone button under the two offers */
+.contact_paths_section .contact_call {
+    margin-top: 48px;
 }
