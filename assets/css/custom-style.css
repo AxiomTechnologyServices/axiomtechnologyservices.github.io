@@ -3151,3 +3151,8 @@ input[type="number"]::-webkit-calendar-picker-indicator {
     background-color: var(--e-global-color-white);
     color: var(--e-global-color-primary);
 }
+
+/* Contact page banner: licensed server-room photo instead of the template's grey placeholder */
+.contact-banner {
+    background-image: url(../images/contact-banner.jpg);
+}
