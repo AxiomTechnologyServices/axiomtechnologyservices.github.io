@@ -3144,3 +3144,10 @@ input[type="number"]::-webkit-calendar-picker-indicator {
 @media screen and (max-width: 375px) {
     .singleblog-section .box5 .feed {width: 280px;}
 }
+
+/* Contact page: keep CTA buttons visible on the hovered gradient box */
+.contact_paths_section .services_box:hover .default-btn {
+    background-image: none;
+    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-primary);
+}
